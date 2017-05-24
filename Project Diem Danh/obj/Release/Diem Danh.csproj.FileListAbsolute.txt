@@ -1,0 +1,98 @@
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.csproj.ResolveComReference.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Deltail_Imagecs.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmAdmin.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmChangeAccount.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmConfigSetting.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmExport.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmGetTitleToExport.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmInfo.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmLogin.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmUser.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Properties.Resources.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmRollCall.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Report.FrmIprintDIEMDANH.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.csproj.GenerateResource.Cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project Diem Danh.exe.licenses
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\RdlCompile.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\RdlCompile.compiled
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.csprojResolveAssemblyReference.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.exe.licenses
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Release\Diem Danh.exe.config
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmTutorialAppcs.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Request.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.UsingDiemDanh.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.UsingReport.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Usingsetting.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.csproj.ResolveComReference.cache
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Deltail_Imagecs.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmAdmin.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmChangeAccount.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmConfigSetting.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmExport.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmGetTitleToExport.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmInfo.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmLogin.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmTutorialAppcs.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmUser.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Properties.Resources.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmRollCall.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Report.FrmIprintDIEMDANH.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Request.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.UsingDiemDanh.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.UsingReport.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Usingsetting.resources
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.csproj.GenerateResource.Cache
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.exe.licenses
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\RdlCompile.cache
+D:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\RdlCompile.compiled
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.csproj.ResolveComReference.cache
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Deltail_Imagecs.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmAdmin.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmChangeAccount.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmConfigSetting.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmExport.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmGetTitleToExport.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmInfo.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmLogin.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmTutorialAppcs.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmUser.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Properties.Resources.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmRollCall.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Report.FrmIprintDIEMDANH.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Request.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.UsingDiemDanh.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.UsingReport.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Usingsetting.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.csproj.GenerateResource.Cache
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.exe.licenses
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\RdlCompile.cache
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\RdlCompile.compiled
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Diem Danh.csprojResolveAssemblyReference.cache
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmShowDetailSinhVien.resources
+E:\GITHUB\DeTaiKhoaHoc\Project-DiemDanh\Project Diem Danh\bin\Release\Diem Danh.exe.config
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\bin\Release\Diem Danh.exe.config
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Diem Danh.csproj.ResolveComReference.cache
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Diem Danh.csprojResolveAssemblyReference.cache
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.Deltail_Imagecs.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmAdmin.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmChangeAccount.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmConfigSetting.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmExport.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmGetTitleToExport.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmInfo.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmLogin.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmShowDetailSinhVien.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmTutorialAppcs.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmUser.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.Properties.Resources.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmRollCall.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.Quanlihocphan.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.Report.FrmIprintDIEMDANH.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.Request.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.UsingDiemDanh.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.UsingReport.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Project_Diem_Danh.Usingsetting.resources
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Diem Danh.csproj.GenerateResource.Cache
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\Diem Danh.exe.licenses
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\RdlCompile.cache
+E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Release\RdlCompile.compiled

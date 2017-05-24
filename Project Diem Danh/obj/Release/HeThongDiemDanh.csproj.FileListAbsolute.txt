@@ -1,0 +1,19 @@
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\HeThongDiemDanh.csprojResolveAssemblyReference.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\HeThongDiemDanh.csproj.ResolveComReference.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Deltail_Imagecs.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmAdmin.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmChangeAccount.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmConfigSetting.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmExport.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmGetTitleToExport.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmInfo.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmLogin.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmMain.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmUser.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Properties.Resources.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.FrmRollCall.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project_Diem_Danh.Report.FrmIprintDIEMDANH.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\HeThongDiemDanh.csproj.GenerateResource.Cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\Project Diem Danh.exe.licenses
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\RdlCompile.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Release\RdlCompile.compiled

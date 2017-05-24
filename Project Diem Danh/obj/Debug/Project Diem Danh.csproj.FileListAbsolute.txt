@@ -1,0 +1,109 @@
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\Project Diem Danh.exe.config
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\Project Diem Danh.exe
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\Project Diem Danh.pdb
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.csprojResolveAssemblyReference.cache
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.Properties.Resources.resources
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.csproj.GenerateResource.Cache
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.exe
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.pdb
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmMain.resources
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmLogin.resources
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.exe.licenses
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmUser.resources
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Data.v15.1.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Printing.v15.1.Core.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Sparkline.v15.1.Core.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Utils.v15.1.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.XtraEditors.v15.1.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\Microsoft.CSharp.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\PresentationCore.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\System.Configuration.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\System.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Data.v15.1.xml
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Printing.v15.1.Core.xml
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Sparkline.v15.1.Core.xml
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Utils.v15.1.xml
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.XtraEditors.v15.1.xml
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.Data.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.Data.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.Data.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.Printing.v15.1.Core.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.Utils.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.Utils.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.Utils.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.Utils.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.XtraEditors.v15.1.resources.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.csproj.ResolveComReference.cache
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\bin\Debug\CrystalDecisions.Shared.dll
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmRollCall.resources
+D:\Working\Project\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmAdmin.resources
+D:\Working\Project\OneDrive\De Tai Khoa Hoc\Project-DiemDanh\Project Diem Danh\bin\Debug\Project Diem Danh.exe.config
+D:\Working\Project\OneDrive\De Tai Khoa Hoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.csproj.ResolveComReference.cache
+D:\Working\Project\OneDrive\De Tai Khoa Hoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.exe
+D:\Working\Project\OneDrive\De Tai Khoa Hoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.pdb
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\Project Diem Danh.exe.config
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.csproj.ResolveComReference.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.exe
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.pdb
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\Project Diem Danh.exe
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\Project Diem Danh.pdb
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Data.v15.1.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Printing.v15.1.Core.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Sparkline.v15.1.Core.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Utils.v15.1.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.XtraEditors.v15.1.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\Microsoft.CSharp.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\PresentationCore.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\System.Configuration.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\System.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Data.v15.1.xml
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Printing.v15.1.Core.xml
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Sparkline.v15.1.Core.xml
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.Utils.v15.1.xml
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\DevExpress.XtraEditors.v15.1.xml
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.Data.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.Data.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.Data.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.Printing.v15.1.Core.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.Printing.v15.1.Core.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.Printing.v15.1.Core.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.Printing.v15.1.Core.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.Sparkline.v15.1.Core.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.Utils.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.Utils.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.Utils.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.Utils.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\de\DevExpress.XtraEditors.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\es\DevExpress.XtraEditors.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ja\DevExpress.XtraEditors.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\bin\Debug\ru\DevExpress.XtraEditors.v15.1.resources.dll
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.csprojResolveAssemblyReference.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmAdmin.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmLogin.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmMain.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmUser.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.Properties.Resources.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmRollCall.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.csproj.GenerateResource.Cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project Diem Danh.exe.licenses
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmExport.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmInfo.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\Project_Diem_Danh.Report.PrintData.resources
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\RdlCompile.cache
+D:\GITHUB\DeTaiKhoHoc\Project-DiemDanh\Project Diem Danh\obj\Debug\RdlCompile.compiled
