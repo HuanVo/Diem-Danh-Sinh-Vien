@@ -217,7 +217,6 @@ namespace Project_Diem_Danh
                             picImage.Image = Image.FromFile(path);
                            ShowMessageResult("Thẻ không tồn tại, vui lòng kiểm tra lại", 0);
                           
-                           
                         }
                         Temp = ID;
                         Time = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString();
@@ -257,8 +256,6 @@ namespace Project_Diem_Danh
             {
                 Clientlist.Remove(client);
                 client.Close();
-                //progressPanel1.Show();
-                //toolStripStatus_lbl.Text = "Đã Kết Đóng Nối Với Thiết Bị...";
             }
         }
 

@@ -188,7 +188,7 @@
             this.groupBox2.Controls.Add(this.pnlLayout_ListClass);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Lime;
+            this.groupBox2.ForeColor = System.Drawing.Color.Yellow;
             this.groupBox2.Location = new System.Drawing.Point(390, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(410, 189);
@@ -269,7 +269,7 @@
             this.GrbInfo.Controls.Add(this.txtID);
             this.GrbInfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.GrbInfo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrbInfo.ForeColor = System.Drawing.Color.Lime;
+            this.GrbInfo.ForeColor = System.Drawing.Color.Yellow;
             this.GrbInfo.Location = new System.Drawing.Point(0, 0);
             this.GrbInfo.Name = "GrbInfo";
             this.GrbInfo.Size = new System.Drawing.Size(390, 189);
@@ -279,14 +279,17 @@
             // 
             // txtMaKhoa
             // 
+            this.txtMaKhoa.Cursor = System.Windows.Forms.Cursors.No;
             this.txtMaKhoa.Location = new System.Drawing.Point(25, 143);
             this.txtMaKhoa.Name = "txtMaKhoa";
             this.txtMaKhoa.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.txtMaKhoa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.txtMaKhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtMaKhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txtMaKhoa.Properties.Appearance.Options.UseFont = true;
             this.txtMaKhoa.Properties.Appearance.Options.UseForeColor = true;
+            this.txtMaKhoa.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtMaKhoa.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtMaKhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtMaKhoa.Properties.ReadOnly = true;
             this.txtMaKhoa.Size = new System.Drawing.Size(154, 22);
@@ -294,14 +297,17 @@
             // 
             // txtFullName
             // 
+            this.txtFullName.Cursor = System.Windows.Forms.Cursors.No;
             this.txtFullName.Location = new System.Drawing.Point(25, 93);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.txtFullName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFullName.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.txtFullName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtFullName.Properties.Appearance.Options.UseBackColor = true;
             this.txtFullName.Properties.Appearance.Options.UseFont = true;
             this.txtFullName.Properties.Appearance.Options.UseForeColor = true;
+            this.txtFullName.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtFullName.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtFullName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtFullName.Properties.ReadOnly = true;
             this.txtFullName.Size = new System.Drawing.Size(154, 22);
@@ -309,14 +315,17 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.Cursor = System.Windows.Forms.Cursors.No;
             this.txtAddress.Location = new System.Drawing.Point(197, 47);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.txtAddress.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.Properties.Appearance.Options.UseBackColor = true;
             this.txtAddress.Properties.Appearance.Options.UseFont = true;
             this.txtAddress.Properties.Appearance.Options.UseForeColor = true;
+            this.txtAddress.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtAddress.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtAddress.Properties.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(178, 22);
@@ -325,8 +334,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(202, 125);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 14);
@@ -336,8 +346,9 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(28, 123);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 14);
@@ -346,14 +357,17 @@
             // 
             // txtPhone
             // 
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.No;
             this.txtPhone.Location = new System.Drawing.Point(197, 143);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.txtPhone.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtPhone.Properties.Appearance.Options.UseBackColor = true;
             this.txtPhone.Properties.Appearance.Options.UseFont = true;
             this.txtPhone.Properties.Appearance.Options.UseForeColor = true;
+            this.txtPhone.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPhone.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtPhone.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtPhone.Properties.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(178, 22);
@@ -362,8 +376,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(202, 75);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 14);
@@ -373,8 +388,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(200, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 14);
@@ -384,8 +400,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(28, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 14);
@@ -395,8 +412,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(29, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 14);
@@ -405,14 +423,17 @@
             // 
             // txtemail
             // 
+            this.txtemail.Cursor = System.Windows.Forms.Cursors.No;
             this.txtemail.Location = new System.Drawing.Point(197, 93);
             this.txtemail.Name = "txtemail";
             this.txtemail.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.txtemail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.txtemail.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtemail.Properties.Appearance.Options.UseBackColor = true;
             this.txtemail.Properties.Appearance.Options.UseFont = true;
             this.txtemail.Properties.Appearance.Options.UseForeColor = true;
+            this.txtemail.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtemail.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtemail.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtemail.Properties.ReadOnly = true;
             this.txtemail.Size = new System.Drawing.Size(178, 22);
@@ -420,14 +441,17 @@
             // 
             // txtID
             // 
+            this.txtID.Cursor = System.Windows.Forms.Cursors.No;
             this.txtID.Location = new System.Drawing.Point(25, 47);
             this.txtID.Name = "txtID";
             this.txtID.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.txtID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.txtID.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtID.Properties.Appearance.Options.UseBackColor = true;
             this.txtID.Properties.Appearance.Options.UseFont = true;
             this.txtID.Properties.Appearance.Options.UseForeColor = true;
+            this.txtID.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtID.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtID.Properties.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(154, 22);
@@ -654,14 +678,17 @@
             // 
             // txtTotalBuoiHoc
             // 
+            this.txtTotalBuoiHoc.Cursor = System.Windows.Forms.Cursors.No;
             this.txtTotalBuoiHoc.Location = new System.Drawing.Point(508, 8);
             this.txtTotalBuoiHoc.Name = "txtTotalBuoiHoc";
             this.txtTotalBuoiHoc.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.txtTotalBuoiHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalBuoiHoc.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.txtTotalBuoiHoc.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtTotalBuoiHoc.Properties.Appearance.Options.UseBackColor = true;
             this.txtTotalBuoiHoc.Properties.Appearance.Options.UseFont = true;
             this.txtTotalBuoiHoc.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTotalBuoiHoc.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtTotalBuoiHoc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtTotalBuoiHoc.Properties.ReadOnly = true;
             this.txtTotalBuoiHoc.Size = new System.Drawing.Size(43, 24);
@@ -670,7 +697,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(330, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 14);
@@ -680,7 +709,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(202, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 14);
@@ -689,14 +720,17 @@
             // 
             // lblSoLuong
             // 
+            this.lblSoLuong.Cursor = System.Windows.Forms.Cursors.No;
             this.lblSoLuong.Location = new System.Drawing.Point(323, 8);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.lblSoLuong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.lblSoLuong.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblSoLuong.Properties.Appearance.Options.UseBackColor = true;
             this.lblSoLuong.Properties.Appearance.Options.UseFont = true;
             this.lblSoLuong.Properties.Appearance.Options.UseForeColor = true;
+            this.lblSoLuong.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblSoLuong.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblSoLuong.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblSoLuong.Properties.ReadOnly = true;
             this.lblSoLuong.Size = new System.Drawing.Size(43, 24);
@@ -704,14 +738,17 @@
             // 
             // lblTenLop
             // 
+            this.lblTenLop.Cursor = System.Windows.Forms.Cursors.No;
             this.lblTenLop.Location = new System.Drawing.Point(88, 9);
             this.lblTenLop.Name = "lblTenLop";
             this.lblTenLop.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.lblTenLop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenLop.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.lblTenLop.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblTenLop.Properties.Appearance.Options.UseBackColor = true;
             this.lblTenLop.Properties.Appearance.Options.UseFont = true;
             this.lblTenLop.Properties.Appearance.Options.UseForeColor = true;
+            this.lblTenLop.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTenLop.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTenLop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblTenLop.Properties.ReadOnly = true;
             this.lblTenLop.Size = new System.Drawing.Size(140, 24);
@@ -721,7 +758,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 14);
@@ -876,6 +915,12 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView1.AppearancePrint.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView1.AppearancePrint.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MASINHVIEN,
             this.hodem,
@@ -1006,6 +1051,14 @@
             this.gridView2.Appearance.ColumnFilterButton.Options.UseBackColor = true;
             this.gridView2.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
             this.gridView2.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.Appearance.Row.Options.UseTextOptions = true;
+            this.gridView2.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.AppearancePrint.HeaderPanel.Options.UseTextOptions = true;
+            this.gridView2.AppearancePrint.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridView2.AppearancePrint.Row.Options.UseTextOptions = true;
+            this.gridView2.AppearancePrint.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MASINHVIEN1,
             this.gridColumn26,

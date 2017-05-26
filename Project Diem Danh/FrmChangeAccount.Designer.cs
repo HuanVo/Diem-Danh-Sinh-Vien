@@ -63,9 +63,9 @@
             this.txtMaKhoa.Name = "txtMaKhoa";
             this.txtMaKhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtMaKhoa.Properties.Appearance.Options.UseForeColor = true;
-            this.txtMaKhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtMaKhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.txtMaKhoa.Properties.ReadOnly = true;
-            this.txtMaKhoa.Size = new System.Drawing.Size(154, 22);
+            this.txtMaKhoa.Size = new System.Drawing.Size(154, 20);
             this.txtMaKhoa.TabIndex = 54;
             // 
             // txtFullName
@@ -74,9 +74,9 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtFullName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtFullName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtFullName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.txtFullName.Properties.ReadOnly = true;
-            this.txtFullName.Size = new System.Drawing.Size(154, 22);
+            this.txtFullName.Size = new System.Drawing.Size(154, 20);
             this.txtFullName.TabIndex = 53;
             // 
             // txtAddress
@@ -85,9 +85,9 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtAddress.Properties.Appearance.Options.UseForeColor = true;
-            this.txtAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtAddress.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.txtAddress.Properties.ReadOnly = true;
-            this.txtAddress.Size = new System.Drawing.Size(178, 22);
+            this.txtAddress.Size = new System.Drawing.Size(178, 20);
             this.txtAddress.TabIndex = 52;
             // 
             // label8
@@ -95,7 +95,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(210, 111);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 14);
@@ -107,7 +107,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(38, 110);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 14);
@@ -120,9 +120,9 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtPhone.Properties.Appearance.Options.UseForeColor = true;
-            this.txtPhone.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtPhone.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.txtPhone.Properties.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(178, 22);
+            this.txtPhone.Size = new System.Drawing.Size(178, 20);
             this.txtPhone.TabIndex = 49;
             // 
             // label7
@@ -130,7 +130,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(210, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 14);
@@ -142,7 +142,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(208, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 14);
@@ -154,7 +154,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(37, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 14);
@@ -166,7 +166,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(37, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 14);
@@ -179,9 +179,9 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtemail.Properties.Appearance.Options.UseForeColor = true;
-            this.txtemail.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtemail.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.txtemail.Properties.ReadOnly = true;
-            this.txtemail.Size = new System.Drawing.Size(178, 22);
+            this.txtemail.Size = new System.Drawing.Size(178, 20);
             this.txtemail.TabIndex = 44;
             // 
             // txtID
@@ -190,9 +190,9 @@
             this.txtID.Name = "txtID";
             this.txtID.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtID.Properties.Appearance.Options.UseForeColor = true;
-            this.txtID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.txtID.Properties.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(154, 22);
+            this.txtID.Size = new System.Drawing.Size(154, 20);
             this.txtID.TabIndex = 43;
             // 
             // txtpassNew
@@ -201,9 +201,9 @@
             this.txtpassNew.Name = "txtpassNew";
             this.txtpassNew.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtpassNew.Properties.Appearance.Options.UseForeColor = true;
-            this.txtpassNew.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtpassNew.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtpassNew.Properties.PasswordChar = '*';
-            this.txtpassNew.Size = new System.Drawing.Size(178, 22);
+            this.txtpassNew.Size = new System.Drawing.Size(178, 20);
             this.txtpassNew.TabIndex = 56;
             // 
             // txtpassOld
@@ -212,9 +212,9 @@
             this.txtpassOld.Name = "txtpassOld";
             this.txtpassOld.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtpassOld.Properties.Appearance.Options.UseForeColor = true;
-            this.txtpassOld.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.txtpassOld.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtpassOld.Properties.PasswordChar = '*';
-            this.txtpassOld.Size = new System.Drawing.Size(154, 22);
+            this.txtpassOld.Size = new System.Drawing.Size(154, 20);
             this.txtpassOld.TabIndex = 55;
             // 
             // label1
@@ -222,28 +222,29 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(37, 167);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 14);
+            this.label1.Size = new System.Drawing.Size(125, 14);
             this.label1.TabIndex = 57;
-            this.label1.Text = "Nhập Mật Khẩu Cũ";
+            this.label1.Text = "Nhập Mật Khẩu Cũ:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(208, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 14);
+            this.label2.Size = new System.Drawing.Size(131, 14);
             this.label2.TabIndex = 58;
-            this.label2.Text = "Nhập Mật Khẩu Mới";
+            this.label2.Text = "Nhập Mật Khẩu Mới:";
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Magenta;
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
@@ -261,6 +262,7 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Magenta;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;

@@ -53,7 +53,7 @@ namespace Project_Diem_Danh
         }
         private void FrmShowDetailSinhVien_Load(object sender, EventArgs e)
         {
-            
+           
             if (MaSV != "" && MaHP != "")
             {
                 //hien thi thong tin sinh vien
@@ -124,6 +124,7 @@ namespace Project_Diem_Danh
                     MessageBox.Show(ex.Message, "Lỗi");
                 }
             }
+            
         }
         public int getSoBuoiHoc(String Mahp)
         {

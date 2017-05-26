@@ -75,12 +75,85 @@ namespace Project_Diem_Danh.DAO
             }
             return kq;
         }
+        public int AddRowTrangThai(String MaHP, int Sobuoihoc, bool trangthai)
+        {
+            int kq = 0;
+            int k = 0;
+            if (trangthai == true)
+                k = 1;
+            try
+            {
+                String sqlString = @"EXEC  AddNewHocPhan_Trangthaituanhoc '" + MaHP + "','" + Sobuoihoc + "','" + k + "'";
+                kq = DataProvider.Instance.ExcuteNonQuery(sqlString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return kq;
+        }
+
         public int DelTrangThaiById(String mahp)
         {
             int kq = 0;
             try
             {
                 String sql = "EXEC DelTrangThaiById N'" + mahp + "'";
+                kq = DataProvider.Instance.ExcuteNonQuery(sql);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return kq;
+        }
+
+        public bool issetTrangthai(String mahp)
+        {
+            bool kq = false;
+            try
+            {
+                String sql = "select count(*) from TRANGTHAITUANHOC where MAHOCPHAN ='" + mahp + "'";
+                if (DataProvider.Instance.ExcuteScaler(sql) > 0)
+                    kq = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return kq;
+        }
+        public int updateTrangthai(String mahp, int sobuoihoc, bool trangthai)
+        {
+             int kq = 0;
+             int k = 0;
+            if(trangthai ==true)
+            {
+               k = 1;
+            }
+           
+            try
+            {
+                String sql = "update TRANGTHAITUANHOC set SOBUOIHOC = '" + sobuoihoc + "', CHECKDIEMDANH ='" + k + "' where MAHOCPHAN = '" + mahp + "'";
+                kq = DataProvider.Instance.ExcuteNonQuery(sql);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return kq;
+        }
+        /// <summary>
+        /// Xóa trạng thái điểm danh
+        /// </summary>
+        /// <param name="Mahp"></param>
+        /// <returns></returns>
+        public int xoaTrangthai(String Mahp)
+        {
+            int kq = 0;
+            try
+            {
+                String sql = "delete from TRANGTHAITUANHOC where MAHOCPHAN ='" + Mahp + "'";
                 kq = DataProvider.Instance.ExcuteNonQuery(sql);
             }
             catch (Exception ex)

@@ -42,19 +42,37 @@ namespace Project_Diem_Danh
 
         private void FrmUser_Load(object sender, EventArgs e)
         {
-            ShowHocPhanByIDGiangVien(IDGiangVien1);
-
-            ShowInfoGiangVienByID(IDGiangVien1);
-            //khi form load ta sẽ load mã lớp với mã giảng viên tương ứng vào trong layoutPannal
-            setColor();
-            if (TypeUser == true)
+            Flashing fl = new Flashing();
+            try
             {
-                aDMINToolStripMenuItem.Visible = true;
-                ShowAllDataByAdmin();
+                //chạy flashing
+                
+                fl.ShowSplash();
+                ShowHocPhanByIDGiangVien(IDGiangVien1);
+
+                ShowInfoGiangVienByID(IDGiangVien1);
+                //khi form load ta sẽ load mã lớp với mã giảng viên tương ứng vào trong layoutPannal
+                setColor();
+                if (TypeUser == true)
+                {
+                    aDMINToolStripMenuItem.Visible = true;
+                    ShowAllDataByAdmin();
+                }
+                else
+                    aDMINToolStripMenuItem.Visible = false;
             }
-            else
-                aDMINToolStripMenuItem.Visible = false;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                // EndFlashing 
+                fl.CloseSplash();
+                this.Activate();
+            }
         }
+   
 
         private void ShowAllDataByAdmin()
         {

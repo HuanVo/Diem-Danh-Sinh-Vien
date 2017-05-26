@@ -31,11 +31,26 @@ namespace Project_Diem_Danh
 
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
-            pnlMenu.BackColor = System.Drawing.Color.FromArgb(0, 166, 90);  
-            cbbgetTableName.SelectedIndex = 0;
-            cbbAllTable.SelectedIndex = 0;
-            lstvReport.Columns.Add("Sự Kiện Log", lstvReport.Size.Width-10);
-            lstvReport.View = View.Details;
+            Flashing fl = new Flashing();
+            try
+            {
+                fl.ShowSplash();
+                pnlMenu.BackColor = System.Drawing.Color.FromArgb(0, 166, 90);
+                cbbgetTableName.SelectedIndex = 0;
+                cbbAllTable.SelectedIndex = 0;
+                lstvReport.Columns.Add("Sự Kiện Log", lstvReport.Size.Width - 10);
+                lstvReport.View = View.Details;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                fl.CloseSplash();
+                this.Activate();
+            }
+            
         }
 
         private DataTable dt;
@@ -118,7 +133,7 @@ namespace Project_Diem_Danh
                             DataProvider.Instance.CloseConnect();
                         }
                         break;
-                   // getTableLop
+                    // getTableLop
                     case 5:
                         {
                             String sqlString = @"EXEC getTableLop";
@@ -172,9 +187,12 @@ namespace Project_Diem_Danh
 
         private void cbbgetTableName_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            Flashing fl = new Flashing();
+
             try
             {
-                if(cbbgetTableName.SelectedIndex!=-1)
+                fl.ShowSplash();
+                if (cbbgetTableName.SelectedIndex != -1)
                 {
                     if (cbbgetTableName.SelectedIndex >= 2 || cbbgetTableName.SelectedIndex < 0)
                     {
@@ -192,6 +210,11 @@ namespace Project_Diem_Danh
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                fl.CloseSplash();
+                this.Activate();
             }
         }
 
@@ -222,12 +245,17 @@ namespace Project_Diem_Danh
 
         private void btnEImport_Click(object sender, EventArgs e)
         {
+            //Flashing.ShowSplash();
+            Flashing fl = new Flashing();
+            fl.ShowSplash();
             if (cbbAllTable.SelectedIndex != -1 && txtPath.Text.Trim() != "")
             {
                 ShowMessageResult("Đang tiến hành Import, vui lòng chờ......", 1);
                 bool check = checkBox.Checked;
                 ImportData(cbbAllTable.SelectedIndex, txtPath.Text.Trim(), check);
             }
+           fl.CloseSplash();
+           this.Activate();
         }
 
         private void ShowMessageResult(String Title, int NumError)
@@ -236,14 +264,14 @@ namespace Project_Diem_Danh
             if (NumError == 0)
             {
                 liv.ForeColor = Color.Red;
-                liv.Text ="[" +DateTime.Now.ToString() +"]      "+ Title;
+                liv.Text = "[" + DateTime.Now.ToString() + "]      " + Title;
                 lstvReport.Items.Add(liv);
             }
             else
             {
-                liv.Text ="[" +DateTime.Now.ToString() +"]      " +Title;
+                liv.Text = "[" + DateTime.Now.ToString() + "]      " + Title;
                 liv.ForeColor = Color.Black;
-                lstvReport.Items.Add( liv);
+                lstvReport.Items.Add(liv);
             }
         }
 
@@ -254,128 +282,141 @@ namespace Project_Diem_Danh
                 ShowMessageResult("Bạn không thể Import vào bảng dữ liệu " + cbbAllTable.SelectedItem.ToString(), 0);
                 return;
             }
-            String Sheet = Importdata.Instance.getNameSheetExcel(PathExcelFile);
-
-            switch (key)
+            try
             {
-                case 1:
-                    {
-                        String ExcelDataQuery = @"select MASINHVIEN, MAHOCPHAN, LANHOC, HOCKY,TUAN_1,TUAN_2,TUAN_3,TUAN_4,TUAN_5,TUAN_6,TUAN_7,TUAN_8,TUAN_9,TUAN_10,TUAN_11,TUAN_12,TUAN_13,TUAN_14,TUAN_15,TUAN_16,TUAN_17,SOBUOIHOC, SOBUOIPHEP FROM " + "[" + Sheet + "$]";
-                        try
+                String Sheet = Importdata.Instance.getNameSheetExcel(PathExcelFile);
+
+                switch (key)
+                {
+                    case 1:
                         {
-                            if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "DIEMDANH", Checked))
-                                ShowMessageResult("Import thành công -  DIEMDANH", 1);
-                            else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - DIEMDANH", 0);
+                            String ExcelDataQuery = @"select MASINHVIEN, MAHOCPHAN, LANHOC, HOCKY,TUAN_1,TUAN_2,TUAN_3,TUAN_4,TUAN_5,TUAN_6,TUAN_7,TUAN_8,TUAN_9,TUAN_10,TUAN_11,TUAN_12,TUAN_13,TUAN_14,TUAN_15,TUAN_16,TUAN_17,SOBUOIHOC, SOBUOIPHEP FROM " + "[" + Sheet + "$]";
+                            try
+                            {
+                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "DIEMDANH", Checked))
+                                    ShowMessageResult("Import thành công -  DIEMDANH", 1);
+                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - DIEMDANH", 0);
+                            }
+                            catch (Exception ex)
+                            {
+                                ShowMessageResult(ex.Message, 0);
+                            }
                         }
-                        catch (Exception ex)
+                        break;
+                    case 2:
                         {
-                            ShowMessageResult(ex.Message, 0);
+                            String ExcelDataQuery = @"select ID, HODEM, TEN, NGAYSINH, GIOITINH, NOISINH, IMAGES, MASINHVIEN, MALOP FROM " + "[" + Sheet + "$]";
+                            try
+                            {
+                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "SINHVIEN", Checked))
+                                    ShowMessageResult("Import thành công -  SINHVIEN", 1);
+                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - SINHVIEN", 0);
+                            }
+                            catch (Exception ex)
+                            {
+                                ShowMessageResult(ex.Message, 0);
+                            }
                         }
-                    }
-                    break;
-                case 2:
-                    {
-                        String ExcelDataQuery = @"select ID, HODEM, TEN, NGAYSINH, GIOITINH, NOISINH, IMAGES, MASINHVIEN, MALOP FROM " + "[" + Sheet + "$]";
-                        try
+                        break;
+                    case 3:
                         {
-                            if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "SINHVIEN", Checked))
-                                ShowMessageResult("Import thành công -  SINHVIEN", 1);
-                            else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - SINHVIEN", 0);
+                            String ExcelDataQuery = @"select MAGIANGVIEN, HODEM, TEN, DIACHI, SODIENTHOAI, NGAYSINH, EMAIL, PASSWORD_USER, MAKHOA, TYPE_USER FROM " + "[" + Sheet + "$]";
+                            try
+                            {
+                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "GIANGVIEN", Checked))
+                                    ShowMessageResult("Import thành công -  GIANGVIEN!", 1);
+                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - GIANGVIEN", 0);
+                            }
+                            catch (Exception ex)
+                            {
+                                ShowMessageResult(ex.Message, 0);
+                            }
                         }
-                        catch (Exception ex)
+                        break;
+                    case 4:
                         {
-                            ShowMessageResult(ex.Message, 0);
+                            String ExcelDataQuery = @"select MAKHOA, TENKHOA, NAMTHANHLAP, DIENTHOAI FROM " + "[" + Sheet + "$]";
+                            try
+                            {
+                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "KHOA", Checked))
+                                    ShowMessageResult("Import thành công -  KHOA", 1);
+                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - KHOA", 0);
+                            }
+                            catch (Exception ex)
+                            {
+                                ShowMessageResult(ex.Message, 0);
+                            }
                         }
-                    }
-                    break;
-                case 3:
-                    {
-                        String ExcelDataQuery = @"select MAGIANGVIEN, HODEM, TEN, DIACHI, SODIENTHOAI, NGAYSINH, EMAIL, PASSWORD_USER, MAKHOA, TYPE_USER FROM " + "[" + Sheet + "$]";
-                        try
+                        break;
+                    case 5:
                         {
-                            if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "GIANGVIEN", Checked))
-                                ShowMessageResult("Import thành công -  GIANGVIEN!", 1);
-                            else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - GIANGVIEN", 0);
+                            String ExcelDataQuery = @"select MALOP, TENLOP, HEDAOTAO, NAMNHAPHOC, MAKHOA FROM " + "[" + Sheet + "$]";
+                            try
+                            {
+                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "LOP", Checked))
+                                    ShowMessageResult("Import thành công -  LOP", 1);
+                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - LOP", 0);
+                            }
+                            catch (Exception ex)
+                            {
+                                ShowMessageResult(ex.Message, 0);
+                            }
                         }
-                        catch (Exception ex)
+                        break;
+                    case 6:
                         {
-                            ShowMessageResult(ex.Message, 0);
+                            String ExcelDataQuery = @"select MAHOCPHAN, TENHOCPHAN, SOTINCHI, MAGIANGVIEN FROM " + "[" + Sheet + "$]";
+                            try
+                            {
+                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "HOCPHAN", Checked))
+                                    ShowMessageResult("Import thành công -  HOCPHAN", 1);
+                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - HOCPHAN", 0);
+                            }
+                            catch (Exception ex)
+                            {
+                                ShowMessageResult(ex.Message, 0);
+                            }
                         }
-                    }
-                    break;
-                case 4:
-                    {
-                        String ExcelDataQuery = @"select MAKHOA, TENKHOA, NAMTHANHLAP, DIENTHOAI FROM " + "[" + Sheet + "$]";
-                        try
+                        break;
+                    case 7:
                         {
-                            if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "KHOA", Checked))
-                                ShowMessageResult("Import thành công -  KHOA", 1);
-                            else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - KHOA", 0);
+                            String ExcelDataQuery = @"select MAHOCPHAN, SOBUOIHOC FROM  " + "[" + Sheet + "$]";
+                            try
+                            {
+                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "TRANGTHAITUANHOC", Checked))
+                                    ShowMessageResult("Import thành công -  TRANGTHAITUANHOC", 1);
+                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - TRANGTHAITUANHOC", 0);
+                            }
+                            catch (Exception ex)
+                            {
+                                ShowMessageResult(ex.Message, 0);
+                            }
                         }
-                        catch (Exception ex)
-                        {
-                            ShowMessageResult(ex.Message, 0);
-                        }
-                    }
-                    break;
-                case 5:
-                    {
-                        String ExcelDataQuery = @"select MALOP, TENLOP, HEDAOTAO, NAMNHAPHOC, MAKHOA FROM " + "[" + Sheet + "$]";
-                        try
-                        {
-                            if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "LOP", Checked))
-                                ShowMessageResult("Import thành công -  LOP", 1);
-                            else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - LOP", 0);
-                        }
-                        catch (Exception ex)
-                        {
-                            ShowMessageResult(ex.Message, 0);
-                        }
-                    }
-                    break;
-                case 6:
-                    {
-                        String ExcelDataQuery = @"select MAHOCPHAN, TENHOCPHAN, SOTINCHI, MAGIANGVIEN FROM " + "[" + Sheet + "$]";
-                        try
-                        {
-                            if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "HOCPHAN", Checked))
-                                ShowMessageResult("Import thành công -  HOCPHAN", 1);
-                            else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - HOCPHAN", 0);
-                        }
-                        catch (Exception ex)
-                        {
-                            ShowMessageResult(ex.Message, 0);
-                        }
-                    }
-                    break;
-                case 7:
-                    {
-                        String ExcelDataQuery = @"select MAHOCPHAN, SOBUOIHOC FROM  " + "[" + Sheet + "$]";
-                        try
-                        {
-                            if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "TRANGTHAITUANHOC", Checked))
-                                ShowMessageResult("Import thành công -  TRANGTHAITUANHOC", 1);
-                            else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - TRANGTHAITUANHOC", 0);
-                        }
-                        catch (Exception ex)
-                        {
-                            ShowMessageResult(ex.Message, 0);
-                        }
-                    }
-                    break;
-                default: ShowMessageResult("Tùy chọn không có hiệu lực, vui lòng kiểm tra lại!", 0); break;
+                        break;
+                    default: ShowMessageResult("Tùy chọn không có hiệu lực, vui lòng kiểm tra lại!", 0); break;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
- 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            if (cbbAllTable.SelectedIndex != -1 && txtTitleFile.Text.Trim() != "")
+            try
             {
-                ShowMessageResult("Đang tiến hành Export, vui lòng chờ......", 1);
-                ExportData(cbbAllTable.SelectedIndex, txtTitleFile.Text.Trim());
+                if (cbbAllTable.SelectedIndex != -1 && txtTitleFile.Text.Trim() != "")
+                {
+                    ShowMessageResult("Đang tiến hành Export, vui lòng chờ......", 1);
+                    ExportData(cbbAllTable.SelectedIndex, txtTitleFile.Text.Trim());
+                }
+                else
+                    ShowMessageResult("Vui Lòng kiểm tra lại tùy chọn danh mục và tiêu đề!", 0);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-            else
-            ShowMessageResult("Vui Lòng kiểm tra lại tùy chọn danh mục và tiêu đề!", 0);
         }
 
         private void ExportData(int key, String Title)
@@ -474,7 +515,7 @@ namespace Project_Diem_Danh
                         }
                     }
                     break;
-               // getTableLop
+                // getTableLop
                 case 5:
                     {
                         try
@@ -552,11 +593,13 @@ namespace Project_Diem_Danh
                     MessageBox.Show("Sửa thành công");
                 }
             }
-            catch(Exception de)
+            catch (Exception de)
             {
                 MessageBox.Show(de.Message);
             }
-          }
+            
+            
+        }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
@@ -568,7 +611,7 @@ namespace Project_Diem_Danh
                         gridcData.Rows.Remove(row);
                 }
             }
-            catch(Exception ed)
+            catch (Exception ed)
             { MessageBox.Show(ed.Message); }
         }
 
@@ -580,36 +623,38 @@ namespace Project_Diem_Danh
 
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            FrmGetTitleToExport getTitle = new FrmGetTitleToExport();
-            getTitle.ShowDialog();
-            String Title = FrmGetTitleToExport.Title;
-            if(Title !=null)
-            {
-            if(Title!="" && cbbgetTableName.SelectedIndex!=-1)
-            {
-                try
+            
+                FrmGetTitleToExport getTitle = new FrmGetTitleToExport();
+                getTitle.ShowDialog();
+                String Title = FrmGetTitleToExport.Title;
+                if (Title != null)
                 {
-                    ExportData(cbbgetTableName.SelectedIndex, Title);
-                    MessageBox.Show("Đã Lưu file!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (Title != "" && cbbgetTableName.SelectedIndex != -1)
+                    {
+                        try
+                        {
+                            ExportData(cbbgetTableName.SelectedIndex, Title);
+                            MessageBox.Show("Đã Lưu file!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
                 }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
+           
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             {
-                if(result==DialogResult.OK)
+                if (result == DialogResult.OK)
                     this.Close();
             }
         }
 
-         private String [] tmp ={};
+        private String[] tmp = { };
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
@@ -619,10 +664,10 @@ namespace Project_Diem_Danh
             myfile.Multiselect = true;
             if (myfile.ShowDialog() == DialogResult.OK)
             {
-               tmp = myfile.FileNames;
-                foreach(String i in tmp)
+                tmp = myfile.FileNames;
+                foreach (String i in tmp)
                 {
-                    txtPaths.Text += i +" ";
+                    txtPaths.Text += i + " ";
                 }
             }
         }
@@ -631,8 +676,10 @@ namespace Project_Diem_Danh
         {
             if (txtPaths.Text != "")
             {
+                Flashing fl = new Flashing();
                 try
                 {
+                    fl.ShowSplash();
                     if (tmp != null)
                     {
                         foreach (String f in tmp)
@@ -646,6 +693,12 @@ namespace Project_Diem_Danh
                 catch (Exception ee)
                 {
                     ShowMessageResult(ee.Message, 0);
+                }
+                finally
+                {
+                    // EndFlashing 
+                    fl.CloseSplash();
+                    this.Activate();
                 }
             }
         }
@@ -688,7 +741,7 @@ namespace Project_Diem_Danh
             {
                 //So cot khong du ngay cho nay, can kiem tra lai
                 DataRow row = tbl.NewRow();
-                for (int j = 0; j < k; j++ )
+                for (int j = 0; j < k; j++)
                 {
                     row[j] = rows[i].ItemArray[j].ToString();
                 }
@@ -699,8 +752,14 @@ namespace Project_Diem_Danh
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (cbbgetTableName.SelectedIndex!=-1)
-                PrintData(cbbgetTableName.SelectedIndex);
+            try
+            {
+                if (cbbgetTableName.SelectedIndex != -1)
+                    PrintData(cbbgetTableName.SelectedIndex);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void PrintData(int key)
@@ -735,35 +794,53 @@ namespace Project_Diem_Danh
             String sql = "select * from diemdanh";
             gridiemDanhDL.DataSource = HocPhanDAO.Instance.getAllTableHocPhan(sql);
         }
+        public void LoadtableTrangThaiTuanHoc()
+        {
+            String sql = "Select TRANGTHAITUANHOC.MAHOCPHAN, TENHOCPHAN, SOBUOIHOC, CHECKDIEMDANH from TRANGTHAITUANHOC inner join HOCPHAN ON TRANGTHAITUANHOC.MAHOCPHAN = HOCPHAN.MAHOCPHAN";
+            gridTrangThaiTuanHoc.DataSource = HocPhanDAO.Instance.getAllTableHocPhan(sql);
+        }
 
         private void backstageViewTabItem5_SelectedChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
         {
-            
-            getAllGiangVientoCombox();
+
+            cbtrangThaiDiemDanh.SelectedIndex = 0;
+            txtTrangThaiSua.SelectedIndex = 0;
+            String sqlGetTableTrangThai = "Select TRANGTHAITUANHOC.MAHOCPHAN, TENHOCPHAN from TRANGTHAITUANHOC inner join HOCPHAN ON TRANGTHAITUANHOC.MAHOCPHAN = HOCPHAN.MAHOCPHAN";
+            String sqlGetTableHocPhan = "SELECT MAHOCPHAN, TENHOCPHAN FROM HOCPHAN";
+            getAllTabletoCombox(cbHPTrangThai, sqlGetTableHocPhan, "TENHOCPHAN", "MAHOCPHAN");
+
+            getAllTabletoCombox(cbHPSuaTrangThai, sqlGetTableTrangThai, "TENHOCPHAN", "MAHOCPHAN");
+
+            String sqlGetTableGiangVien = "Select MAGIANGVIEN, (HODEM +' ' + TEN +'('+MAGIANGVIEN+')') AS HOTEN from giangvien";
+            getAllTabletoCombox(cbMaGV, sqlGetTableGiangVien, "HOTEN", "MAGIANGVIEN");
+            getAllTabletoCombox(txmMaGVedit, sqlGetTableGiangVien, "HOTEN", "MAGIANGVIEN");
+            //txmMaGVedit
             LoadtableHocphan();
             LoadtableDiemDanh();
-
-            
+            LoadtableTrangThaiTuanHoc();
         }
-        public void getAllGiangVientoCombox()
+        public void getAllTabletoCombox(System.Windows.Forms.ComboBox cbb, String sql, String DisplayMember, String ValueMember)
         {
-            String sql = "Select MAGIANGVIEN, (HODEM +' ' + TEN +'('+MAGIANGVIEN+')') AS HOTEN from giangvien";
-            DataTable dt = GiangVienDAO.Instance.getAllTableGiangVien(sql);
-            cbMaGV.DataSource = dt;
-            cbMaGV.DisplayMember = "HOTEN";
-            cbMaGV.ValueMember = "MAGIANGVIEN";
+            DataTable dt = DataProvider.Instance.LoadAllTable(sql);
+            cbb.DataSource = dt;
+            cbb.DisplayMember = DisplayMember;
+            cbb.ValueMember = ValueMember;
         }
-
+        /// <summary>
+        /// Thêm Học Phần
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
                 String mahp = txtMaHP.Text.ToString().Trim();
                 String tenhp = txtTenHP.Text.ToString().Trim();
-                int sotc = Convert.ToInt32(txtSoTC.Text.ToString().Trim());
                 String magv = cbMaGV.SelectedValue.ToString();
-                if (mahp != "" && tenhp != "" && sotc > 0 && magv != "")
+                if (mahp != "" && tenhp != "" && txtSoTC.Text.ToString().Trim() != ""  && magv != "")
                 {
+                    int sotc = Convert.ToInt32(txtSoTC.Text.ToString().Trim());
                     if (!HocPhanDAO.Instance.issetHocPhan(mahp))
                     {
                         AddHocPhan(mahp, tenhp, sotc, magv);
@@ -789,7 +866,7 @@ namespace Project_Diem_Danh
 
         public void AddHocPhan(String mahp, String tenhp, int sotc, String magv)
         {
-            if (HocPhanDAO.Instance.AddNewHP(mahp, tenhp, sotc, magv)>0)
+            if (HocPhanDAO.Instance.AddNewHP(mahp, tenhp, sotc, magv) > 0)
             {
 
                 if (TrangThaiTuanHocDAO.Instance.AddNewHocPhan_Trangthaituanhoc(mahp) > 0)
@@ -797,12 +874,12 @@ namespace Project_Diem_Danh
                     lblkq.ForeColor = Color.Black;
                     lblkq.Text = "Đã thêm thành công học phần " + tenhp + "(" + mahp + ")";
                     LoadtableHocphan();
-                }  
+                }
                 else
                 {
                     lblkq.ForeColor = Color.Red;
                     lblkq.Text = "Đã có lỗi xãy ra. Không thêm được Học Phần" + tenhp + "(" + mahp + ")";
-                }  
+                }
             }
         }
 
@@ -814,7 +891,11 @@ namespace Project_Diem_Danh
             txtTenHP.Text = "";
             txtMaHP.Focus();
         }
-
+        /// <summary>
+        /// Sửa học phần
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSua_Click(object sender, EventArgs e)
         {
             try
@@ -822,7 +903,7 @@ namespace Project_Diem_Danh
                 String mahp = txtMaHPedit.Text.ToString().Trim();
                 String tenhp = txtTenHPedit.Text.ToString().Trim();
                 int sotc = Convert.ToInt32(txtSoTCedit.Text.ToString().Trim());
-                String magv = txmMaGVedit.Text.ToString().Trim();
+                String magv = txmMaGVedit.SelectedValue.ToString();
                 if (HocPhanDAO.Instance.issetHocPhan(mahp))
                 {
                     if (mahp != "" && tenhp != "" && sotc > 0 && magv != "")
@@ -859,16 +940,16 @@ namespace Project_Diem_Danh
         {
             if (HocPhanDAO.Instance.UpdateHP(mahp, tenph, sotc, magv) > 0)
             {
-                    lblkqedit.ForeColor = Color.Black;
-                    lblkqedit.Text = "Đã sửa thành công học phần " + tenph + "(" + mahp + ")";
-                    LoadtableHocphan();
-            }else
+                lblkqedit.ForeColor = Color.Black;
+                lblkqedit.Text = "Đã sửa thành công học phần " + tenph + "(" + mahp + ")";
+                LoadtableHocphan();
+            }
+            else
             {
-                 lblkqedit.ForeColor = Color.Red;
-                   lblkqedit.Text = "Đã có lỗi xãy ra. Không sửa học Phần" + tenph + "(" + mahp + ")";
+                lblkqedit.ForeColor = Color.Red;
+                lblkqedit.Text = "Đã có lỗi xãy ra. Không sửa học Phần" + tenph + "(" + mahp + ")";
             }
         }
-
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
@@ -877,7 +958,6 @@ namespace Project_Diem_Danh
             txtSoTCedit.Text = gridView1.GetFocusedRowCellDisplayText("SOTINCHI").ToString();
             txmMaGVedit.Text = gridView1.GetFocusedRowCellDisplayText("MAGIANGVIEN").ToString();
             txtMaHPdel.Text = gridView1.GetFocusedRowCellDisplayText("MAHOCPHAN").ToString();
-
         }
 
         private void btnResetedit_Click(object sender, EventArgs e)
@@ -888,14 +968,18 @@ namespace Project_Diem_Danh
             txmMaGVedit.Text = "";
             txtTenHPedit.Focus();
         }
-
+        /// <summary>
+        /// Xóa Học Phần
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnXoa_Click(object sender, EventArgs e)
         {
             String mahp = txtMaHPdel.Text.ToString().Trim();
-            if(HocPhanDAO.Instance.issetHocPhan(mahp))
+            if (HocPhanDAO.Instance.issetHocPhan(mahp))
             {
-               DialogResult rs= MessageBox.Show("Bạn Có muốn xóa học phần có mã " + mahp + "?", "Xác Nhận Xóa Học Phần", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if(rs == DialogResult.OK)
+                DialogResult rs = MessageBox.Show("Bạn Có muốn xóa học phần có mã " + mahp + "?", "Xác Nhận Xóa Học Phần", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (rs == DialogResult.OK)
                 {
                     DelHocPhan(mahp);
                 }
@@ -905,14 +989,13 @@ namespace Project_Diem_Danh
                 lblkqxoa.ForeColor = Color.Red;
                 lblkqxoa.Text = "Học phần đã chọn không tồn tại, vui lòng kiểm tra lại!";
             }
-            
-            
         }
+        
         public void DelHocPhan(String MaHP)
         {
             try
             {
-                if(TrangThaiTuanHocDAO.Instance.DelTrangThaiById(MaHP)>0)
+                if (TrangThaiTuanHocDAO.Instance.DelTrangThaiById(MaHP) > 0)
                 {
                     if (HocPhanDAO.Instance.DelHocPhanById(MaHP) > 0)
                     {
@@ -932,31 +1015,23 @@ namespace Project_Diem_Danh
                     lblkqxoa.Text = "Không thể xóa học phần có mã: " + MaHP + ", Kiểm tra lại!";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Xin Chào");
-        }
-
         private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            
+
             txtMaSVSdel.Text = gridView2.GetFocusedRowCellDisplayText("MASINHVIEN").ToString();
             txtMaHPSdel.Text = gridView2.GetFocusedRowCellDisplayText("MAHOCPHAN").ToString();
             txtLanHocSdel.Text = gridView2.GetFocusedRowCellDisplayText("LANHOC").ToString();
         }
 
-        
-        
-        public void DelDiemDanhAdmin(String MaSV,String Mahp, int lanhoc)
+        public void DelDiemDanhAdmin(String MaSV, String Mahp, int lanhoc)
         {
-            if (DiemDanhDAO.Instance.DelDiemdanhByMaSV(MaSV, Mahp, lanhoc)>0)
+            if (DiemDanhDAO.Instance.DelDiemdanhByMaSV(MaSV, Mahp, lanhoc) > 0)
             {
                 lbldelDD.ForeColor = Color.Black;
                 lbldelDD.Text = "Đã Xóa " + MaSV + " ra khỏi danh sách điểm danh";
@@ -972,10 +1047,14 @@ namespace Project_Diem_Danh
 
         public bool IsNumber(string pText)
         {
-        Regex regex = new Regex(@"^[-+]?[0-9]*\.?[0-9]+$");
-        return regex.IsMatch(pText);
+            Regex regex = new Regex(@"^[-+]?[0-9]*\.?[0-9]+$");
+            return regex.IsMatch(pText);
         }
-
+        /// <summary>
+        /// Xóa điểm danh
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelDD_Click(object sender, EventArgs e)
         {
             try
@@ -983,7 +1062,7 @@ namespace Project_Diem_Danh
                 String masv = txtMaSVSdel.Text.ToString().Trim();
                 String Mahp = txtMaHPSdel.Text.ToString().Trim();
                 int lanhoc = 1;
-                if(IsNumber(txtLanHocSdel.Text.ToString())==true)
+                if (IsNumber(txtLanHocSdel.Text.ToString()) == true)
                 {
                     lanhoc = Convert.ToInt32(txtLanHocSdel.Text.ToString());
                 }
@@ -1026,10 +1105,14 @@ namespace Project_Diem_Danh
                 MessageBox.Show(ex.Message);
             }
         }
-
+        /// <summary>
+        /// Thêm điểm danh
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnThemDiemDanh_Click(object sender, EventArgs e)
         {
-             try
+            try
             {
                 String masv = txtMaSVS.Text.ToString().Trim();
                 int lanhoc = 1;
@@ -1039,7 +1122,7 @@ namespace Project_Diem_Danh
                 }
                 String Mahp = txtMaHPS.Text.ToString().Trim();
                 String HocKy = txtHocKy.Text.ToString().Trim();
-                if (masv != "" && Mahp != "" && lanhoc > 0 && HocKy !="")
+                if (masv != "" && Mahp != "" && lanhoc > 0 && HocKy != "")
                 {
                     if (SinhVienDAO.Instance.issetSinhVien(masv))
                     {
@@ -1078,9 +1161,10 @@ namespace Project_Diem_Danh
                 MessageBox.Show(ex.Message);
             }
         }
+
         public void AddNewDiemDanh(String MaSV, String Mahp, int lanhoc, String hk)
         {
-            if(DiemDanhDAO.Instance.AddNewDiemDanh(MaSV, Mahp, lanhoc, hk)>0)
+            if (DiemDanhDAO.Instance.AddNewDiemDanh(MaSV, Mahp, lanhoc, hk) > 0)
             {
                 label20.ForeColor = Color.Black;
                 label20.Text = "Thêm thành công!";
@@ -1089,7 +1173,148 @@ namespace Project_Diem_Danh
             else
             {
                 label20.ForeColor = Color.Red;
-                label20.Text = "Lỗi. Không thể thêm " +MaSV +" Vào CSDL";
+                label20.Text = "Lỗi. Không thể thêm " + MaSV + " Vào CSDL";
+            }
+        }
+        /// <summary>
+        /// Thêm trạng thái tuần học
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnThemTrangThai_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool checkdiemdanh = Convert.ToBoolean(cbtrangThaiDiemDanh.SelectedIndex);
+
+                if (IsNumber(txtTuanHocTrangThai.Text.ToString().Trim()))
+                {
+                    int sotuandahoc = Convert.ToInt32(txtTuanHocTrangThai.Text.ToString().Trim());
+                    String Mahp = cbHPTrangThai.SelectedValue.ToString();
+
+                    if (HocPhanDAO.Instance.issetHocPhan(Mahp) == true && TrangThaiTuanHocDAO.Instance.issetTrangthai(Mahp) == false)
+                    {
+                        AddNewTrangThaiDiemDanh(Mahp, sotuandahoc, checkdiemdanh);
+                    }
+                    else
+                    {
+                        lblThemTrangthai.ForeColor = Color.Red;
+                        lblThemTrangthai.Text = "Mã học phần " + "(" + Mahp + ") không tồn tại hoặc đã có trong danh sách";
+                    }
+                }
+                else
+                {
+                    lblThemTrangthai.ForeColor = Color.Red;
+                    lblThemTrangthai.Text = "Trường Số tuần đã học phải là số";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void AddNewTrangThaiDiemDanh(String MaHP, int Sobuoihoc, bool Trangthai)
+        {
+            if (TrangThaiTuanHocDAO.Instance.AddRowTrangThai(MaHP, Sobuoihoc, Trangthai) > 0)
+            {
+                lblThemTrangthai.ForeColor = Color.Black;
+                lblThemTrangthai.Text = "Thêm thành công!" + MaHP + " Vào CSDL";
+                LoadtableDiemDanh();
+            }
+            else
+            {
+                lblThemTrangthai.ForeColor = Color.Red;
+                lblThemTrangthai.Text = "Lỗi. Không thể thêm " + MaHP + " Vào CSDL";
+            }
+        }
+
+        private void btnclearTrangThai_Click(object sender, EventArgs e)
+        {
+            txtTuanHocTrangThai.Text = "";
+        }
+        /// <summary>
+        /// Sửa Trạng thái tuần học
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void btnXoaTrangThai_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool TrangThaiSua = Convert.ToBoolean(txtTrangThaiSua.SelectedIndex);
+
+                if (IsNumber(txtTuanHocSuaTrangThai.Text.ToString().Trim()))
+                {
+                    int sotuandahoc = Convert.ToInt32(txtTuanHocSuaTrangThai.Text.ToString().Trim());
+                    String Mahp = cbHPTrangThai.SelectedValue.ToString();
+
+                    if (TrangThaiTuanHocDAO.Instance.issetTrangthai(Mahp) == true)
+                    {
+                        // sửa chổ này
+                        if (TrangThaiTuanHocDAO.Instance.updateTrangthai(Mahp, sotuandahoc, TrangThaiSua) > 0)
+                        {
+                            LoadtableTrangThaiTuanHoc();
+                            lblSuaTrangThai.ForeColor = Color.Black;
+                            lblSuaTrangThai.Text = "Sửa thành công";
+                        }
+                        else
+                        {
+                            lblSuaTrangThai.ForeColor = Color.Red;
+                            lblSuaTrangThai.Text = "Lỗi. Sửa không thành công!";
+                        }
+                    }
+                    else
+                    {
+                        lblSuaTrangThai.ForeColor = Color.Red;
+                        lblSuaTrangThai.Text = "Mã học phần " + "(" + Mahp + ") không tồn tại";
+                    }
+                }
+                else
+                {
+                    lblSuaTrangThai.ForeColor = Color.Red;
+                    lblSuaTrangThai.Text = "Trường Số tuần đã học phải là số";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        /// <summary>
+        /// Xóa trạng thái điểm danh
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String Mahp = txtXoaTrangThai.Text.ToString();
+                if (TrangThaiTuanHocDAO.Instance.issetTrangthai(Mahp) == true)
+                {
+                    // xóa chổ này
+                    if (TrangThaiTuanHocDAO.Instance.xoaTrangthai(Mahp) > 0)
+                    {
+                        lblXoaTrangthai.ForeColor = Color.Black;
+                        lblXoaTrangthai.Text = "xóa thành công";
+                    }
+                    else
+                    {
+                        lblXoaTrangthai.ForeColor = Color.Red;
+                        lblXoaTrangthai.Text = "Lỗi. xóa không thành công!";
+                    }
+                }
+                else
+                {
+                    lblXoaTrangthai.ForeColor = Color.Red;
+                    lblXoaTrangthai.Text = "Mã học phần " + "(" + Mahp + ") không tồn tại";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

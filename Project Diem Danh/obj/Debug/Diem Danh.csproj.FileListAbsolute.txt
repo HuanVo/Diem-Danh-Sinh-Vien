@@ -506,3 +506,107 @@ E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\
 E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Debug\RdlCompile.cache
 E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Debug\RdlCompile.compiled
 E:\GITHUB\Vo Van Huan\DeTaiKhoaHoc\Project-DiemDanh_Error\Project Diem Danh\obj\Debug\Project_Diem_Danh.Quanlihocphan.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\Diem Danh.exe.config
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.csproj.ResolveComReference.cache
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.exe
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.pdb
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\App.config
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\Diem Danh.exe
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\Diem Danh.pdb
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.Data.v15.1.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.Printing.v15.1.Core.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.Sparkline.v15.1.Core.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.Utils.v15.1.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraBars.v15.1.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraEditors.v15.1.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraGrid.v15.1.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraLayout.v15.1.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraPrinting.v15.1.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraScheduler.v15.1.Core.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraScheduler.v15.1.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\Microsoft.CSharp.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\PresentationCore.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\System.Configuration.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\System.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.Data.v15.1.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.Printing.v15.1.Core.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.Sparkline.v15.1.Core.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.Utils.v15.1.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraBars.v15.1.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraEditors.v15.1.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraGrid.v15.1.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraLayout.v15.1.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraPrinting.v15.1.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraScheduler.v15.1.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\DevExpress.XtraScheduler.v15.1.Core.xml
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.Data.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.Data.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.Data.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.Printing.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.Printing.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.Printing.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.Printing.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.Sparkline.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.Sparkline.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.Sparkline.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.Sparkline.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.Utils.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.Utils.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.Utils.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.Utils.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.XtraBars.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.XtraBars.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.XtraBars.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.XtraBars.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.XtraEditors.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.XtraEditors.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.XtraEditors.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.XtraEditors.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.XtraGrid.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.XtraGrid.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.XtraGrid.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.XtraGrid.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.XtraLayout.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.XtraLayout.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.XtraLayout.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.XtraLayout.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.XtraPrinting.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.XtraPrinting.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.XtraPrinting.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.XtraPrinting.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.XtraScheduler.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.XtraScheduler.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.XtraScheduler.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.XtraScheduler.v15.1.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\de\DevExpress.XtraScheduler.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\es\DevExpress.XtraScheduler.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ja\DevExpress.XtraScheduler.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\ru\DevExpress.XtraScheduler.v15.1.Core.resources.dll
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.csprojResolveAssemblyReference.cache
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.Deltail_Imagecs.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmAdmin.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmChangeAccount.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmConfigSetting.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmExport.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmGetTitleToExport.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmInfo.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmLogin.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmShowDetailSinhVien.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmTutorialAppcs.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmUser.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.Properties.Resources.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.FrmRollCall.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.Quanlihocphan.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.Report.FrmIprintDIEMDANH.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.Request.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.UsingDiemDanh.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.UsingReport.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.Usingsetting.resources
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.csproj.GenerateResource.Cache
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.exe.licenses
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\RdlCompile.cache
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\RdlCompile.compiled
+E:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Project_Diem_Danh.Flashing.resources

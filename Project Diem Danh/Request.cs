@@ -23,21 +23,31 @@ namespace Project_Diem_Danh
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if(txtFrom.Text.Trim() != "")
+            if (txtFrom.Text.Trim() != "")
             {
-                Thread sendmail = new Thread(() =>
+                try
                 {
-                    String kq = Send_Email(txtFrom.Text, txtTo.Text, txtSubject.Text, txtBody.Text);
-                    MessageBox.Show(kq, "Trạng Thái", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                });
-                sendmail.Start();
+                    Thread sendmail = new Thread(() =>
+                    {
+                        String kq = Send_Email(txtFrom.Text, txtTo.Text, txtSubject.Text, txtBody.Text);
+                        MessageBox.Show(kq, "Trạng Thái", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    });
+                    sendmail.Start();
+                }
+                catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             }
         }
 
         public String Send_Email(string SendFrom, string SendTo, string Subject, string Body)
         {
+            Flashing fl = new Flashing();
             try
             {
+                fl.ShowSplash();
                 System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
                 bool result = regex.IsMatch(SendFrom);
                
@@ -62,6 +72,11 @@ namespace Project_Diem_Danh
             catch(Exception ex)
             {
                 return ex.Message;
+            }
+            finally
+            {
+                fl.CloseSplash();
+                //this.Activate();
             }
         }
 

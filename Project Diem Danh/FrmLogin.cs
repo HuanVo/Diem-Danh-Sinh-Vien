@@ -17,8 +17,12 @@ namespace Project_Diem_Danh
         RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         public FrmLogin()
         {
+            Flashing fl = new Flashing();
+            fl.ShowSplash();
             InitializeComponent();
             rkApp.SetValue("registryDiemDanh", Application.ExecutablePath.ToString());
+            fl.CloseSplash();
+            this.Activate();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
