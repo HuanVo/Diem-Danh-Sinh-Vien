@@ -69,7 +69,6 @@ namespace Project_Diem_Danh.Report
                 {
                     connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + excelFilePath + ";Extended Properties=Excel 12.0";
                 }
-               
                       //execute a query to erase any previous data from destination table 
                 if(DelOldData == true)
                 {

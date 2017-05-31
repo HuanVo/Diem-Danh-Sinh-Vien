@@ -44,17 +44,23 @@ namespace Project_Diem_Danh
         // Close the splash (Loading...) screen    
         public  void CloseSplash()
         {
-            // Need to call on the thread that launched this splash        
-            if(_splashForm.InvokeRequired)
+            // Need to call on the thread that launched this splash   
+            try
             {
-                _splashForm.Invoke(new MethodInvoker(CloseSplash));
-                _splashThread = null;
-            }
-                
-            else
+                if (_splashForm.InvokeRequired)
+                {
+                    _splashForm.Invoke(new MethodInvoker(CloseSplash));
+                    _splashThread = null;
+                }
+
+                else
+                {
+                    Application.ExitThread();
+                    //_splashThread = null; 
+                }
+            }catch(Exception ex)
             {
-                Application.ExitThread(); 
-                //_splashThread = null; 
+                MessageBox.Show(ex.Message);
             }
                 
         }

@@ -50,7 +50,6 @@ namespace Project_Diem_Danh
                 fl.CloseSplash();
                 this.Activate();
             }
-            
         }
 
         private DataTable dt;
@@ -188,7 +187,6 @@ namespace Project_Diem_Danh
         private void cbbgetTableName_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             Flashing fl = new Flashing();
-
             try
             {
                 fl.ShowSplash();
@@ -597,8 +595,6 @@ namespace Project_Diem_Danh
             {
                 MessageBox.Show(de.Message);
             }
-            
-            
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -623,7 +619,6 @@ namespace Project_Diem_Danh
 
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            
                 FrmGetTitleToExport getTitle = new FrmGetTitleToExport();
                 getTitle.ShowDialog();
                 String Title = FrmGetTitleToExport.Title;
@@ -642,7 +637,6 @@ namespace Project_Diem_Danh
                         }
                     }
                 }
-           
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@ namespace Project_Diem_Danh.DTO
             private set { instance = value; }
         }
         public SinhVienDAO() { }
+
         public DataTable getAllTableSinhVien(String sql)
         {
             DataTable dt = new DataTable();
@@ -52,8 +53,6 @@ namespace Project_Diem_Danh.DTO
             }
             return sv;
         }
-        
-
        
         public bool checkIsStudents(String ID)
         {
@@ -71,6 +70,7 @@ namespace Project_Diem_Danh.DTO
             dt = DataProvider.Instance.LoadAllTable(sqlString);
             return dt;
         }
+
         public bool issetSinhVien(String MaGV)
         {
             bool kq = false;

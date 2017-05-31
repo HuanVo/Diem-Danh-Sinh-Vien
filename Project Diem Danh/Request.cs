@@ -44,10 +44,10 @@ namespace Project_Diem_Danh
 
         public String Send_Email(string SendFrom, string SendTo, string Subject, string Body)
         {
-            Flashing fl = new Flashing();
+            
             try
             {
-                fl.ShowSplash();
+                
                 System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
                 bool result = regex.IsMatch(SendFrom);
                
@@ -57,26 +57,22 @@ namespace Project_Diem_Danh
                 }
                 else
                 {
+                    
                     SmtpClient mailclient = new SmtpClient("smtp.gmail.com", 587);
                     mailclient.EnableSsl = true;
                     mailclient.Credentials = new NetworkCredential(SendFrom, txtPass.Text);
-
                     MailMessage message = new MailMessage(SendFrom, SendTo);
                     message.Subject = Subject;
                     message.Body = Body;
-                    
                     mailclient.Send(message);
+                   
                     return "Cám ơn "+ txtFrom.Text+ " đã góp ý! chúng tôi sẽ phản hồi sớm nhất có thể.";
                 }
             }
             catch(Exception ex)
             {
                 return ex.Message;
-            }
-            finally
-            {
-                fl.CloseSplash();
-                //this.Activate();
+                //fl.CloseSplash();
             }
         }
 

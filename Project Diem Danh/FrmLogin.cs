@@ -56,7 +56,9 @@ namespace Project_Diem_Danh
                 }
                 catch (Exception ex)
                 {
+                   
                     MessageBox.Show("Không thể kết nối. Vui lòng kiểm tra lại"+System.Environment.NewLine+ex.Message);
+                    
                 }
             }
         }

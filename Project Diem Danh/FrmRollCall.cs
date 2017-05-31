@@ -213,8 +213,8 @@ namespace Project_Diem_Danh
                             txtSex.Text = "";
                             txtClass.Text = "";
                             txtAddress.Text = "";
-                            String path = System.IO.Directory.GetCurrentDirectory() + @"\Images\no_avatar.png";
-                            picImage.Image = Image.FromFile(path);
+                            //String path = System.IO.Directory.GetCurrentDirectory() + @"\Images\no_avatar.png";
+                            picImage.Image =  global::Project_Diem_Danh.Properties.Resources.no_avatar;
                            ShowMessageResult("Thẻ không tồn tại, vui lòng kiểm tra lại", 0);
                           
                         }
@@ -242,8 +242,8 @@ namespace Project_Diem_Danh
                                 txtSex.Text = "";
                                 txtClass.Text = "";
                                 txtAddress.Text = "";
-                                String path = Application.StartupPath + "\\Images\\no_avatar.png";
-                                picImage.Image = Image.FromFile(path);
+                                //String path = Application.StartupPath + "\\Images\\no_avatar.png";
+                                picImage.Image = global::Project_Diem_Danh.Properties.Resources.no_avatar;
                                 ShowMessageResult("Thẻ không tồn tại, vui lòng kiểm tra lại", 0);
                             }
                             Temp = ID;
@@ -372,8 +372,8 @@ namespace Project_Diem_Danh
 
                    if (sv.HinhDaiDien == null)
                    {
-                       picImage.Image = Image.FromFile(@"Images\no_avatar.png");
-                       deltailImage = Image.FromFile(@"Images\no_avatar.png");
+                       picImage.Image = global::Project_Diem_Danh.Properties.Resources.no_avatar; //Image.FromFile(@"Images\no_avatar.png");
+                       deltailImage = global::Project_Diem_Danh.Properties.Resources.no_avatar;// Image.FromFile(@"Images\no_avatar.png");
                    }
                    else
                    {
@@ -743,6 +743,7 @@ namespace Project_Diem_Danh
             return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         } 
         #endregion
+
 
     }
 }

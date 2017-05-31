@@ -32,6 +32,7 @@ namespace Project_Diem_Danh.DAO
             get { return da; }
             set { da = value; }
         }
+
         #region cac thuoc tinh cua lop
         private String ConnectionString = ConfigurationManager.ConnectionStrings["ConnectString"].ConnectionString;
 
@@ -62,6 +63,7 @@ namespace Project_Diem_Danh.DAO
             catch (Exception ex)
             {
                 MessageBox.Show("Không thể kết nối đến server. Vui lòng kiểm tra lại", "Lỗi kết nối", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
@@ -124,7 +126,6 @@ namespace Project_Diem_Danh.DAO
             CloseConnect();
             return kq;
         }
-       
     }
         #endregion
 }
