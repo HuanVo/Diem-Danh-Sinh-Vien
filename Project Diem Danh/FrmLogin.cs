@@ -70,10 +70,7 @@ namespace Project_Diem_Danh
                      Application.Exit();
         }
 
-        private void txtUserName_TextChanged(object sender, EventArgs e)
-        {
-            txtUserName.Text = txtUserName.Text.ToUpper();
-        }
+        
 
         private void FrmLogin_HelpButtonClicked(object sender, CancelEventArgs e)
         {

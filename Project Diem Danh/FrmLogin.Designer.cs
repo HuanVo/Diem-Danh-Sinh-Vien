@@ -208,7 +208,7 @@
             this.txtPass.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtPass.Size = new System.Drawing.Size(183, 20);
             this.txtPass.TabIndex = 1;
-            // 
+            //
             // txtUserName
             // 
             this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -227,12 +227,12 @@
             this.txtUserName.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtUserName.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtUserName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.txtUserName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUserName.Properties.NullValuePrompt = "Tên Đăng Nhập";
             this.txtUserName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtUserName.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtUserName.Size = new System.Drawing.Size(183, 20);
             this.txtUserName.TabIndex = 0;
-            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // FrmLogin
             // 

@@ -208,15 +208,18 @@ namespace Project_Diem_Danh
                         }
                         else
                         {
+                            String sms = "KHONG TON TAI" + "-" +"MA THE" ;
+                            foreach (Socket clientSEND in Clientlist)
+                            {
+                                clientSEND.Send(Encoding.UTF8.GetBytes(sms));
+                            }
                             txtCode.Text = "";
                             txtFullName.Text = "";
                             txtSex.Text = "";
                             txtClass.Text = "";
                             txtAddress.Text = "";
-                            //String path = System.IO.Directory.GetCurrentDirectory() + @"\Images\no_avatar.png";
                             picImage.Image =  global::Project_Diem_Danh.Properties.Resources.no_avatar;
                            ShowMessageResult("Thẻ không tồn tại, vui lòng kiểm tra lại", 0);
-                          
                         }
                         Temp = ID;
                         Time = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString();
@@ -232,11 +235,15 @@ namespace Project_Diem_Danh
                             if (Data != "")
                             {
                                 ShowInfoSinhVienByID(Data);
-
                                 WriteData(Data, MaHP);
                             }
                             else
                             {
+                                String sms = "KHONG TON TAI" + "-" + "MA THE";
+                                foreach (Socket clientSEND in Clientlist)
+                                {
+                                    clientSEND.Send(Encoding.UTF8.GetBytes(sms));
+                                }
                                 txtCode.Text = "";
                                 txtFullName.Text = "";
                                 txtSex.Text = "";
@@ -245,6 +252,7 @@ namespace Project_Diem_Danh
                                 //String path = Application.StartupPath + "\\Images\\no_avatar.png";
                                 picImage.Image = global::Project_Diem_Danh.Properties.Resources.no_avatar;
                                 ShowMessageResult("Thẻ không tồn tại, vui lòng kiểm tra lại", 0);
+                                
                             }
                             Temp = ID;
                             Time = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString();                   
@@ -258,7 +266,6 @@ namespace Project_Diem_Danh
                 client.Close();
             }
         }
-
         /// <summary>
         /// Ghi Dữ Liệu Nhận Được Từ Phần Cứng
         /// </summary>
@@ -731,6 +738,7 @@ namespace Project_Diem_Danh
                 }
             }
         }
+
         /// <summary>
         /// chuyen chuoi co dau thanh khong dau
         /// </summary>
@@ -743,7 +751,5 @@ namespace Project_Diem_Danh
             return regex.Replace(temp, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         } 
         #endregion
-
-
     }
 }
