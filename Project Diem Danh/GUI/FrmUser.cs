@@ -42,14 +42,9 @@ namespace Project_Diem_Danh
 
         private void FrmUser_Load(object sender, EventArgs e)
         {
-            Flashing fl = new Flashing();
             try
             {
-                //chạy flashing
-                
-                fl.ShowSplash();
                 ShowHocPhanByIDGiangVien(IDGiangVien1);
-
                 ShowInfoGiangVienByID(IDGiangVien1);
                 //khi form load ta sẽ load mã lớp với mã giảng viên tương ứng vào trong layoutPannal
                 setColor();
@@ -65,14 +60,7 @@ namespace Project_Diem_Danh
             {
                 MessageBox.Show(ex.ToString());
             }
-            finally
-            {
-                // EndFlashing 
-                fl.CloseSplash();
-                this.Activate();
-            }
         }
-   
 
         private void ShowAllDataByAdmin()
         {
@@ -118,9 +106,10 @@ namespace Project_Diem_Danh
             }
         }
 
-        private void ShowHocPhanByIDGiangVien(String sql)
+        private void ShowHocPhanByIDGiangVien(String id)
         {
-            List<HocPhan> dshocphan = HocPhanDAO.Instance.getListHocPhanByIDGiangVien(sql);
+            List<HocPhan> dshocphan = HocPhanDAO.Instance.getListHocPhanByIDGiangVien(id);
+            pnlLayout_ListClass.Controls.Clear();
             foreach (HocPhan i in dshocphan)
             {
                 Button btnHocPhan = new Button() { Width = HocPhanDAO.WidthButton, Height = HocPhanDAO.HeightButton };
@@ -134,6 +123,33 @@ namespace Project_Diem_Danh
                 btnHocPhan.Click += btnHocPhan_Click;
                 btnHocPhan.Tag = i;
                 pnlLayout_ListClass.Controls.Add(btnHocPhan);
+            }
+        }
+
+        private void ShowHocPhanByIDGiangVienAndMaHP(String id, String mahp)
+        {
+            List<HocPhan> dshocphan = HocPhanDAO.Instance.getListHocPhanByIDGiangVienAndMaHP(id, mahp);
+            if (dshocphan.Count > 0)
+            {
+                pnlLayout_ListClass.Controls.Clear();
+                foreach (HocPhan i in dshocphan)
+                {
+                    Button btnHocPhan = new Button() { Width = HocPhanDAO.WidthButton, Height = HocPhanDAO.HeightButton };
+                    btnHocPhan.Text = i.TenHocPhan + System.Environment.NewLine + "(" + i.MaHocPhan + ")";
+                    btnHocPhan.ForeColor = System.Drawing.Color.White;
+                    btnHocPhan.FlatStyle = FlatStyle.Flat;
+                    btnHocPhan.FlatAppearance.BorderSize = 1;
+                    btnHocPhan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(104, 33, 122);
+                    btnHocPhan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(104, 33, 122);
+                    btnHocPhan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(16, 124, 16);
+                    btnHocPhan.Click += btnHocPhan_Click;
+                    btnHocPhan.Tag = i;
+                    pnlLayout_ListClass.Controls.Add(btnHocPhan);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy học phần có mã: \"" + mahp.ToString() + "\"", " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -174,9 +190,9 @@ namespace Project_Diem_Danh
                 }
                 FrmConfigSetting.EditAppSetting("thoigianhoc", times.ToString());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Không thể đáp ứng yêu cầu, Vui lòng liên hệ quản trị để được hổ trợ","Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không thể đáp ứng yêu cầu, Vui lòng liên hệ quản trị để được hổ trợ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -210,7 +226,6 @@ namespace Project_Diem_Danh
             if (result == DialogResult.OK)
             {
                 this.Close();
-
             }
         }
 
@@ -224,7 +239,6 @@ namespace Project_Diem_Danh
                 mydialog.Filter = "Excel file(*.xls)|*.xls";
                 mydialog.Title = "Chọn Nơi Lưu File:";
                 mydialog.CheckPathExists = true;
-
                 if (mydialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     try
@@ -384,21 +398,21 @@ namespace Project_Diem_Danh
 
         private void gridView2_RowClick(object sender, RowClickEventArgs e)
         {
-           try
-           {
-               int rowHandle = e.RowHandle;
-               Object val1 = gridView2.GetRowCellValue(rowHandle, gridView2.Columns[0]);
-               Object val2 = gridView2.GetRowCellValue(rowHandle, gridView2.Columns[3]);
-               if (val1 != null && val2 !=null)
-               {
-                   FrmShowDetailSinhVien frm = new FrmShowDetailSinhVien((String)val1, (String)val2);
-                   frm.Show();
-               }
-           }
-            catch(Exception ex)
-           {
-               MessageBox.Show(ex.Message);
-           }
+            try
+            {
+                int rowHandle = e.RowHandle;
+                Object val1 = gridView2.GetRowCellValue(rowHandle, gridView2.Columns[0]);
+                Object val2 = gridView2.GetRowCellValue(rowHandle, gridView2.Columns[3]);
+                if (val1 != null && val2 != null)
+                {
+                    FrmShowDetailSinhVien frm = new FrmShowDetailSinhVien((String)val1, (String)val2);
+                    frm.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void gridView1_RowClick(object sender, RowClickEventArgs e)
@@ -406,7 +420,7 @@ namespace Project_Diem_Danh
             try
             {
                 int rowHandle = e.RowHandle;
-                
+
                 Object val1 = gridView1.GetRowCellValue(rowHandle, gridView1.Columns[0]);
                 Object val2 = gridView1.GetRowCellValue(rowHandle, gridView1.Columns[3]);
                 if (val1 != null)
@@ -426,5 +440,57 @@ namespace Project_Diem_Danh
             FrmTutorialAppcs frm = new FrmTutorialAppcs();
             frm.ShowDialog();
         }
+
+        /// <summary>
+        /// button tim kiem lop.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSearchLop_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String mahp = txtMHPSearch.Text.ToString().Trim();
+                if (!mahp.Equals(""))
+                {
+                    ShowHocPhanByIDGiangVienAndMaHP(IDGiangVien1, mahp);
+                }
+                else
+                {
+                    ShowHocPhanByIDGiangVien(IDGiangVien1);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void searchControl1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            SearchHP();
+        }
+
+        private void SearchHP()
+        {
+             try
+            {
+                String mahp = txtMHPSearch.Text.ToString().Trim();
+                if (!mahp.Equals(""))
+                {
+                    ShowHocPhanByIDGiangVienAndMaHP(IDGiangVien1, mahp);
+                }
+                else
+                {
+                    ShowHocPhanByIDGiangVien(IDGiangVien1);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+       
     }
 }

@@ -28,6 +28,11 @@ namespace Project_Diem_Danh.DAO
         {
 
         }
+        /// <summary>
+        /// Lấy học phần bởi mã giảng viên, trả về sanh sách HOCPHAN
+        /// </summary>
+        /// <param name="id">Mã giảng viên</param>
+        /// <returns></returns>
         public List<HocPhan> getListHocPhanByIDGiangVien(String id)
         {
             List<HocPhan> result = new List<HocPhan>();
@@ -40,6 +45,29 @@ namespace Project_Diem_Danh.DAO
             }
             return result;
         }
+        /// <summary>
+        /// Lấy Học phần bởi mã giảng viên và mã học phần, trả về danh sách HOCPHAN
+        /// </summary>
+        /// <param name="id">Mã giảng viên</param>
+        /// <param name="Mahp">Mã học phần</param>
+        /// <returns></returns>
+        public List<HocPhan> getListHocPhanByIDGiangVienAndMaHP(String id, String Mahp)
+        {
+            List<HocPhan> result = new List<HocPhan>();
+            String sqlString = @"EXEC getListHocPhanByIDGiangVienAndMaHP '" + id + "', '"+Mahp+"'";
+            DataTable dt = DataProvider.Instance.LoadAllTable(sqlString);
+            foreach (DataRow i in dt.Rows)
+            {
+                HocPhan hp = new HocPhan(i);
+                result.Add(hp);
+            }
+            return result;
+        }
+        /// <summary>
+        /// Lấy học phần bởi mã học phần, trả về Kiểu HOCPHAN
+        /// </summary>
+        /// <param name="ID">Mã học phần</param>
+        /// <returns></returns>
         public HocPhan getHocPhanByID(String ID)
         {
             HocPhan hp = new HocPhan();
@@ -55,7 +83,11 @@ namespace Project_Diem_Danh.DAO
             }
             return hp;
         }
-
+        /// <summary>
+        /// Lấy toàn bộ bảng học phần
+        /// </summary>
+        /// <param name="sql">Câu lệnh lấy</param>
+        /// <returns></returns>
         public DataTable getAllTableHocPhan(String sql)
         {
             DataTable dt = new DataTable();
@@ -66,10 +98,10 @@ namespace Project_Diem_Danh.DAO
         /// <summary>
         /// Thêm mới một học phần
         /// </summary>
-        /// <param name="mahp"></param>
-        /// <param name="tenhp"></param>
-        /// <param name="sotc"></param>
-        /// <param name="Magv"></param>
+        /// <param name="mahp">Mã học phần</param>
+        /// <param name="tenhp">Tên học phần</param>
+        /// <param name="sotc">số tín chỉ</param>
+        /// <param name="Magv">Mã giảng viên</param>
         /// <returns></returns>
         public int AddNewHP(String mahp, String tenhp, int sotc, String Magv)
         {
@@ -87,7 +119,7 @@ namespace Project_Diem_Danh.DAO
         /// <summary>
         /// Kiểm tra tồn tại của mã học phần
         /// </summary>
-        /// <param name="mahp"></param>
+        /// <param name="mahp">Mã học phần</param>
         /// <returns></returns>
         public bool issetHocPhan(String mahp)
         {
@@ -106,10 +138,10 @@ namespace Project_Diem_Danh.DAO
         /// <summary>
         /// Update học phần
         /// </summary>
-        /// <param name="mahp"></param>
-        /// <param name="tenhp"></param>
-        /// <param name="sotc"></param>
-        /// <param name="Magv"></param>
+        /// <param name="mahp">Mã học phần</param>
+        /// <param name="tenhp">tên học phần</param>
+        /// <param name="sotc">số tín chỉ</param>
+        /// <param name="Magv">Mã giảng viên</param>
         /// <returns></returns>
         public int UpdateHP(String mahp, String tenhp, int sotc, String Magv)
         {
@@ -125,6 +157,11 @@ namespace Project_Diem_Danh.DAO
             }
             return kq;
         }
+        /// <summary>
+        /// Xóa học phần bởi Mã Học Phần
+        /// </summary>
+        /// <param name="mahp"></param>
+        /// <returns></returns>
         public int DelHocPhanById(String mahp)
         {
             int kq = 0;

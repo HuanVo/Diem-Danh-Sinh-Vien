@@ -40,8 +40,6 @@ namespace Project_Diem_Danh.Report
             f.CheckPathExists = true;
             if (f.ShowDialog() == DialogResult.OK)
             {
-                Flashing fl = new Flashing();
-                fl.ShowSplash();
                 //set thuoc tinh cho tieu de
                 xlSheet.get_Range("A1", Convert.ToChar(socot + 65) + "1").Merge(false);
                 Excel.Range caption = xlSheet.get_Range("A1", Convert.ToChar(socot + 65) + "1");
@@ -91,7 +89,6 @@ namespace Project_Diem_Danh.Report
                 releaseObject(xlSheet);
                 releaseObject(xlBook);
                 releaseObject(xlApp);
-                fl.CloseSplash();
                 
                 result = true;
             }

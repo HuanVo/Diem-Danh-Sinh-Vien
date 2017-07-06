@@ -141,10 +141,10 @@
     <Compile Include="DAO\MappingCode_Id.cs" />
     <Compile Include="DAO\TempDiemDanhDAO.cs" />
     <Compile Include="DAO\TrangThaiTuanHocDAO.cs" />
-    <Compile Include="Deltail_Imagecs.cs">
+    <Compile Include="GUI\Deltail_Imagecs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Deltail_Imagecs.Designer.cs">
+    <Compile Include="GUI\Deltail_Imagecs.Designer.cs">
       <DependentUpon>Deltail_Imagecs.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\DataIdTime.cs" />
@@ -155,70 +155,70 @@
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DTO\TempDiemDanh.cs" />
     <Compile Include="DTO\TrangThaiTuanHoc.cs" />
-    <Compile Include="Flashing.cs">
+    <Compile Include="GUI\Flashing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Flashing.Designer.cs">
+    <Compile Include="GUI\Flashing.Designer.cs">
       <DependentUpon>Flashing.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAdmin.cs">
+    <Compile Include="GUI\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdmin.Designer.cs">
+    <Compile Include="GUI\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmChangeAccount.cs">
+    <Compile Include="GUI\FrmChangeAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmChangeAccount.Designer.cs">
+    <Compile Include="GUI\FrmChangeAccount.Designer.cs">
       <DependentUpon>FrmChangeAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConfigSetting.cs">
+    <Compile Include="GUI\FrmConfigSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConfigSetting.Designer.cs">
+    <Compile Include="GUI\FrmConfigSetting.Designer.cs">
       <DependentUpon>FrmConfigSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmExport.cs">
+    <Compile Include="GUI\FrmExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmExport.Designer.cs">
+    <Compile Include="GUI\FrmExport.Designer.cs">
       <DependentUpon>FrmExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGetTitleToExport.cs">
+    <Compile Include="GUI\FrmGetTitleToExport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmGetTitleToExport.Designer.cs">
+    <Compile Include="GUI\FrmGetTitleToExport.Designer.cs">
       <DependentUpon>FrmGetTitleToExport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInfo.cs">
+    <Compile Include="GUI\FrmInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInfo.Designer.cs">
+    <Compile Include="GUI\FrmInfo.Designer.cs">
       <DependentUpon>FrmInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="GUI\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
+    <Compile Include="GUI\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmShowDetailSinhVien.cs">
+    <Compile Include="GUI\FrmShowDetailSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmShowDetailSinhVien.Designer.cs">
+    <Compile Include="GUI\FrmShowDetailSinhVien.Designer.cs">
       <DependentUpon>FrmShowDetailSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTutorialAppcs.cs">
+    <Compile Include="GUI\FrmTutorialAppcs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTutorialAppcs.Designer.cs">
+    <Compile Include="GUI\FrmTutorialAppcs.Designer.cs">
       <DependentUpon>FrmTutorialAppcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUser.cs">
+    <Compile Include="GUI\FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUser.Designer.cs">
+    <Compile Include="GUI\FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -228,10 +228,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Quanlihocphan.cs">
+    <Compile Include="GUI\Quanlihocphan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Quanlihocphan.Designer.cs">
+    <Compile Include="GUI\Quanlihocphan.Designer.cs">
       <DependentUpon>Quanlihocphan.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\DSTEMDIEMDANH.Designer.cs">
@@ -249,10 +249,10 @@
       <DependentUpon>DSTEMPDIEMDANH.xsd</DependentUpon>
     </Compile>
     <Compile Include="Report\Exportdata.cs" />
-    <Compile Include="FrmRollCall.cs">
+    <Compile Include="GUI\FrmRollCall.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRollCall.Designer.cs">
+    <Compile Include="GUI\FrmRollCall.Designer.cs">
       <DependentUpon>FrmRollCall.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\FrmIprintDIEMDANH.cs">
@@ -263,65 +263,65 @@
     </Compile>
     <Compile Include="Report\Importdata.cs" />
     <Compile Include="Report\ProcessImage.cs" />
-    <Compile Include="Request.cs">
+    <Compile Include="GUI\Request.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Request.Designer.cs">
+    <Compile Include="GUI\Request.Designer.cs">
       <DependentUpon>Request.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="UsingDiemDanh.cs">
+    <Compile Include="GUI\UsingDiemDanh.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UsingDiemDanh.Designer.cs">
+    <Compile Include="GUI\UsingDiemDanh.Designer.cs">
       <DependentUpon>UsingDiemDanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsingReport.cs">
+    <Compile Include="GUI\UsingReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UsingReport.Designer.cs">
+    <Compile Include="GUI\UsingReport.Designer.cs">
       <DependentUpon>UsingReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usingsetting.cs">
+    <Compile Include="GUI\Usingsetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Usingsetting.Designer.cs">
+    <Compile Include="GUI\Usingsetting.Designer.cs">
       <DependentUpon>Usingsetting.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Deltail_Imagecs.resx">
+    <EmbeddedResource Include="GUI\Deltail_Imagecs.resx">
       <DependentUpon>Deltail_Imagecs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Flashing.resx">
+    <EmbeddedResource Include="GUI\Flashing.resx">
       <DependentUpon>Flashing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAdmin.resx">
+    <EmbeddedResource Include="GUI\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmChangeAccount.resx">
+    <EmbeddedResource Include="GUI\FrmChangeAccount.resx">
       <DependentUpon>FrmChangeAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConfigSetting.resx">
+    <EmbeddedResource Include="GUI\FrmConfigSetting.resx">
       <DependentUpon>FrmConfigSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmExport.resx">
+    <EmbeddedResource Include="GUI\FrmExport.resx">
       <DependentUpon>FrmExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmGetTitleToExport.resx">
+    <EmbeddedResource Include="GUI\FrmGetTitleToExport.resx">
       <DependentUpon>FrmGetTitleToExport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInfo.resx">
+    <EmbeddedResource Include="GUI\FrmInfo.resx">
       <DependentUpon>FrmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="GUI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmShowDetailSinhVien.resx">
+    <EmbeddedResource Include="GUI\FrmShowDetailSinhVien.resx">
       <DependentUpon>FrmShowDetailSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTutorialAppcs.resx">
+    <EmbeddedResource Include="GUI\FrmTutorialAppcs.resx">
       <DependentUpon>FrmTutorialAppcs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUser.resx">
+    <EmbeddedResource Include="GUI\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -330,10 +330,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRollCall.resx">
+    <EmbeddedResource Include="GUI\FrmRollCall.resx">
       <DependentUpon>FrmRollCall.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Quanlihocphan.resx">
+    <EmbeddedResource Include="GUI\Quanlihocphan.resx">
       <DependentUpon>Quanlihocphan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\FrmIprintDIEMDANH.resx">
@@ -341,16 +341,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\RpDIEMDANH.rdlc" />
     <EmbeddedResource Include="Report\RpPTEMPDIEMDANH.rdlc" />
-    <EmbeddedResource Include="Request.resx">
+    <EmbeddedResource Include="GUI\Request.resx">
       <DependentUpon>Request.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsingDiemDanh.resx">
+    <EmbeddedResource Include="GUI\UsingDiemDanh.resx">
       <DependentUpon>UsingDiemDanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsingReport.resx">
+    <EmbeddedResource Include="GUI\UsingReport.resx">
       <DependentUpon>UsingReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usingsetting.resx">
+    <EmbeddedResource Include="GUI\Usingsetting.resx">
       <DependentUpon>Usingsetting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

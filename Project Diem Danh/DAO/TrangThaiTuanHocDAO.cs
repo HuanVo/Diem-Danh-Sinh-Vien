@@ -162,5 +162,29 @@ namespace Project_Diem_Danh.DAO
             }
             return kq;
         }
+        /// <summary>
+        /// Lay so tuan da hoc cua hoc phan theo ma hoc phan
+        /// </summary>
+        /// <param name="MaHP"></param>
+        /// <returns></returns>
+        public int getTuanHoc(String MaHP)
+        {
+            int result = -1;
+            String sql = "select SOBUOIHOC from TRANGTHAITUANHOC where MAHOCPHAN ='" + MaHP + "'";
+            try
+            {
+                DataTable dt = DataProvider.Instance.LoadAllTable(sql);
+                foreach(DataRow row in dt.Rows)
+                {
+                    result = Convert.ToInt32(row[0].ToString());
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return result;
+        }
     }
 }

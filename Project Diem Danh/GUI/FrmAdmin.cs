@@ -19,43 +19,35 @@ using System.IO;
 using System.Drawing.Printing;
 using System.Threading;
 using System.Text.RegularExpressions;
-
 namespace Project_Diem_Danh
 {
     public partial class FrmAdmin : DevExpress.XtraEditors.XtraForm
     {
         public FrmAdmin()
         {
-            InitializeComponent();
+                InitializeComponent();
         }
-
+        
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
-            Flashing fl = new Flashing();
             try
             {
-                fl.ShowSplash();
                 pnlMenu.BackColor = System.Drawing.Color.FromArgb(0, 166, 90);
                 cbbgetTableName.SelectedIndex = 0;
                 cbbAllTable.SelectedIndex = 0;
                 lstvReport.Columns.Add("Sự Kiện Log", lstvReport.Size.Width - 10);
                 lstvReport.View = View.Details;
+                String sqlGetTableHocPhan = "SELECT MAHOCPHAN, TENHOCPHAN + ' ('+MAHOCPHAN +')' AS TENHOCPHAN FROM HOCPHAN";
+                getAllTabletoCombox(cbbhpselect, sqlGetTableHocPhan, "TENHOCPHAN", "MAHOCPHAN");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            finally
-            {
-                fl.CloseSplash();
-                this.Activate();
-            }
         }
-
         private DataTable dt;
         private SqlCommandBuilder scb;
         private SqlDataAdapter sda;
-
         private void ShowAllTableByComboxSelected(int key)
         {
             try
@@ -186,10 +178,8 @@ namespace Project_Diem_Danh
 
         private void cbbgetTableName_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            Flashing fl = new Flashing();
             try
             {
-                fl.ShowSplash();
                 if (cbbgetTableName.SelectedIndex != -1)
                 {
                     if (cbbgetTableName.SelectedIndex >= 2 || cbbgetTableName.SelectedIndex < 0)
@@ -208,11 +198,6 @@ namespace Project_Diem_Danh
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                fl.CloseSplash();
-                this.Activate();
             }
         }
 
@@ -243,17 +228,19 @@ namespace Project_Diem_Danh
 
         private void btnEImport_Click(object sender, EventArgs e)
         {
-            //Flashing.ShowSplash();
-            Flashing fl = new Flashing();
-            fl.ShowSplash();
-            if (cbbAllTable.SelectedIndex != -1 && txtPath.Text.Trim() != "")
+            try
             {
-                ShowMessageResult("Đang tiến hành Import, vui lòng chờ......", 1);
-                bool check = checkBox.Checked;
-                ImportData(cbbAllTable.SelectedIndex, txtPath.Text.Trim(), check);
+                if (cbbAllTable.SelectedIndex != -1 && txtPath.Text.Trim() != "")
+                {
+                    ShowMessageResult("Đang tiến hành Import, vui lòng chờ......", 1);
+                    bool check = checkBox.Checked;
+                    ImportData(cbbAllTable.SelectedIndex, txtPath.Text.Trim(), check);
+                }
             }
-           fl.CloseSplash();
-           this.Activate();
+            catch
+            {
+                MessageBox.Show("Chao Moi nguoi");
+            }
         }
 
         private void ShowMessageResult(String Title, int NumError)
@@ -670,10 +657,8 @@ namespace Project_Diem_Danh
         {
             if (txtPaths.Text != "")
             {
-                Flashing fl = new Flashing();
                 try
                 {
-                    fl.ShowSplash();
                     if (tmp != null)
                     {
                         foreach (String f in tmp)
@@ -688,12 +673,7 @@ namespace Project_Diem_Danh
                 {
                     ShowMessageResult(ee.Message, 0);
                 }
-                finally
-                {
-                    // EndFlashing 
-                    fl.CloseSplash();
-                    this.Activate();
-                }
+               
             }
         }
 
@@ -1310,6 +1290,137 @@ namespace Project_Diem_Danh
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+
+
+        /*
+        * Phần báo cáo thống kê
+        * 
+        */
+
+        private void cbbhpselect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbhpselect.SelectedValue.ToString() != "System.Data.DataRowView")
+            {
+                String MaHP = cbbhpselect.SelectedValue.ToString();
+                ShowListHocPhanByMaHP(MaHP);
+                ShowInfoHocPhanByMaHocPhan(MaHP);
+            }
+        }
+
+        /// <summary>
+        /// Hiển thị thông tin học phần bởi học được chọn trong list học phần
+        /// </summary>
+        /// <param name="MaHocPhan">Mã học phần</param>
+        private void ShowInfoHocPhanByMaHocPhan(String MaHocPhan)
+        {
+            String sql = "EXEC getInfoHocPhanByMaHP '" + MaHocPhan + "'";
+            DataTable dt = HocPhanDAO.Instance.getAllTableHocPhan(sql);
+            foreach(DataRow row in dt.Rows)
+            {
+                txthpReport.Text = row["HOCPHAN"].ToString();
+                txtstcReport.Text = row["SOTINCHI"].ToString();
+                txtthReport.Text = TrangThaiTuanHocDAO.Instance.getTuanHoc(MaHocPhan).ToString();
+                txtgvqlReport.Text = row["HOTEN"].ToString();
+            }
+        }
+
+        /// <summary>
+        /// Hiển thị danh sách điểm danh sinh viên của học phần bởi mã học phần
+        /// </summary>
+        /// <param name="MaHocPhan"></param>
+        private void ShowListHocPhanByMaHP(String MaHocPhan)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("MaSinhVien", typeof(String));
+            dt.Columns.Add("HoTenSinhVien", typeof(String));
+            dt.Columns.Add("MaHocPhan", typeof(String));
+            dt.Columns.Add("TenHocPhan", typeof(String));
+            dt.Columns.Add("SoTinChi", typeof(String));
+            dt.Columns.Add("LanHoc", typeof(String));
+            dt.Columns.Add("HocKy", typeof(String));
+
+            dt.Columns.Add("BuoiHoc", typeof(int));
+            dt.Columns.Add("BuoiVang", typeof(int));
+            dt.Columns.Add("VangCoPhep", typeof(int));
+            dt.Columns.Add("GhiChu", typeof(String));
+
+            try
+            {
+                DataTable SourceData = DiemDanhDAO.Instance.LoadDulieuThongkeBaocao(MaHocPhan);
+                int Tongsotuandahoc = TrangThaiTuanHocDAO.Instance.getTuanHoc(MaHocPhan);
+                foreach (DataRow row in SourceData.Rows)
+                {
+                    DataRow rows;
+                    rows = dt.NewRow();
+                    rows["MaSinhVien"] = row["MASINHVIEN"];
+                    rows["HoTenSinhVien"] = row["HOTEN"];
+                    rows["MaHocPhan"] = row["MAHOCPHAN"];
+                    rows["TenHocPhan"] = row["TENHOCPHAN"];
+                    rows["SoTinChi"] = Convert.ToInt32(row["SOTINCHI"]);
+                    rows["LanHoc"] = row["LANHOC"];
+                    rows["HocKy"] = row["HOCKY"];
+                    rows["BuoiHoc"] = Convert.ToInt32(row["SOBUOIHOC"]);
+                    rows["VangCoPhep"] = Convert.ToInt32(row["SOBUOIPHEP"]);
+                    // [So buoi vang] = [tong so buoi da hoc] - [so buoi hoc] + [so buoi phep]
+                    rows["BuoiVang"] = Tongsotuandahoc - Convert.ToInt32(row["SOBUOIHOC"]) - Convert.ToInt32(row["SOBUOIPHEP"]);
+                    rows["GhiChu"] = CreateNoteInReport(Convert.ToInt32(row["SOTINCHI"]), Convert.ToInt32(row["SOBUOIHOC"]), Tongsotuandahoc);
+                    dt.Rows.Add(rows);
+                }
+                gridReport.DataSource = dt;
+            }
+            catch(Exception ex)
+           {
+               MessageBox.Show(ex.Message,"Thông báo");
+           }
+        }
+        /// <summary>
+        /// Tạo Ghi chú kết quả cấm thi/được phép thi trong ADMIN [báo cáo thống kê]
+        /// </summary>
+        /// <returns></returns>
+        private String CreateNoteInReport(int sotc, int sobuoihoc, int tongtuanhoc)
+        {
+            String resualt = "";
+            if(tongtuanhoc>0 && sotc>0)
+            {
+                if (((tongtuanhoc - sobuoihoc) * 100) / (sotc * tongtuanhoc) > 20)
+                    resualt = "Cấm thi";
+            }
+           
+            return resualt;
+        }
+
+        private void gridView6_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            try
+            {
+                int rowHandle = e.RowHandle;
+
+                Object val1 = gridView6.GetRowCellValue(rowHandle, gridView6.Columns[0]);
+                Object val2 = gridView6.GetRowCellValue(rowHandle, gridView6.Columns[2]);
+                if (val1 != null)
+                {
+                    FrmShowDetailSinhVien frm = new FrmShowDetailSinhVien((String)val1, (String)val2);
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnprintbcReport_Click(object sender, EventArgs e)
+        {
+            // Check whether the GridControl can be previewed.
+            if (!gridReport.IsPrintingAvailable)
+            {
+                MessageBox.Show("Không tồn tại dữ liệu");
+                return;
+            }
+            // Open the Preview window.
+            gridReport.ShowPrintPreview();
         }
     }
 }

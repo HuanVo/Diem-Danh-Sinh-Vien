@@ -39,8 +39,6 @@
             this.pnlState = new System.Windows.Forms.Panel();
             this.lbxLogCurent = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnchitiet = new System.Windows.Forms.Button();
             this.txtNoCard = new DevExpress.XtraEditors.TextEdit();
             this.txtIdCoPhep = new DevExpress.XtraEditors.TextEdit();
@@ -207,8 +205,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.btnchitiet);
             this.panel1.Controls.Add(this.txtNoCard);
             this.panel1.Controls.Add(this.txtIdCoPhep);
@@ -222,28 +218,6 @@
             this.panel1.Size = new System.Drawing.Size(593, 201);
             this.panel1.TabIndex = 1;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(29, 52);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(177, 14);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "CCCT15B009; CCCT15B010; ...";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(29, 121);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(357, 14);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Ví dụ: CCT15B09 - Bị ốm; CCT15B01 - Bận họp đoàn trường; ...";
-            // 
             // btnchitiet
             // 
             this.btnchitiet.FlatAppearance.BorderSize = 0;
@@ -252,7 +226,7 @@
             this.btnchitiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnchitiet.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnchitiet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnchitiet.Location = new System.Drawing.Point(340, 169);
+            this.btnchitiet.Location = new System.Drawing.Point(376, 162);
             this.btnchitiet.Name = "btnchitiet";
             this.btnchitiet.Size = new System.Drawing.Size(152, 29);
             this.btnchitiet.TabIndex = 14;
@@ -267,7 +241,9 @@
             this.txtNoCard.EditValue = "";
             this.txtNoCard.Location = new System.Drawing.Point(31, 27);
             this.txtNoCard.Name = "txtNoCard";
-            this.txtNoCard.Properties.NullText = "CCCT15B009; CCCT15B010; ...";
+            this.txtNoCard.Properties.NullValuePrompt = "Ví dụ CCCT15B009; CCCT15B010; ...";
+            this.txtNoCard.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtNoCard.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtNoCard.Size = new System.Drawing.Size(527, 20);
             this.txtNoCard.TabIndex = 13;
             // 
@@ -276,10 +252,12 @@
             this.txtIdCoPhep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIdCoPhep.EditValue = "";
-            this.txtIdCoPhep.Location = new System.Drawing.Point(31, 97);
+            this.txtIdCoPhep.Location = new System.Drawing.Point(31, 86);
             this.txtIdCoPhep.Name = "txtIdCoPhep";
             this.txtIdCoPhep.Properties.MaxLength = 1000;
-            this.txtIdCoPhep.Properties.NullText = "Ví dụ: CCT15B09 - Bị ốm; CCT15B01 - Bận họp đoàn trường; ...";
+            this.txtIdCoPhep.Properties.NullValuePrompt = "Ví dụ: CCT15B09 - Bị ốm; CCT15B01 - Bận họp đoàn trường; ...";
+            this.txtIdCoPhep.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtIdCoPhep.Properties.ShowNullValuePromptWhenFocused = true;
             this.txtIdCoPhep.Size = new System.Drawing.Size(527, 20);
             this.txtIdCoPhep.TabIndex = 12;
             // 
@@ -292,7 +270,7 @@
             this.btnSaveNoCard_Sabbatical.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSaveNoCard_Sabbatical.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveNoCard_Sabbatical.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveNoCard_Sabbatical.Location = new System.Drawing.Point(34, 144);
+            this.btnSaveNoCard_Sabbatical.Location = new System.Drawing.Point(34, 119);
             this.btnSaveNoCard_Sabbatical.Name = "btnSaveNoCard_Sabbatical";
             this.btnSaveNoCard_Sabbatical.Size = new System.Drawing.Size(60, 27);
             this.btnSaveNoCard_Sabbatical.TabIndex = 9;
@@ -315,11 +293,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(36, 176);
+            this.label6.Location = new System.Drawing.Point(27, 166);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(303, 16);
+            this.label6.Size = new System.Drawing.Size(353, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "Lưu ý: Các mã cách nhau bằng dấu chấm phẫy ( ; )";
             // 
@@ -328,7 +306,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(27, 75);
+            this.label1.Location = new System.Drawing.Point(27, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(279, 18);
             this.label1.TabIndex = 4;
@@ -374,6 +352,7 @@
             // 
             // txtBithday
             // 
+            this.txtBithday.Enabled = false;
             this.txtBithday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtBithday.Location = new System.Drawing.Point(85, 351);
             this.txtBithday.Name = "txtBithday";
@@ -424,6 +403,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.Enabled = false;
             this.txtAddress.Location = new System.Drawing.Point(85, 383);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
@@ -444,6 +424,7 @@
             // 
             // txtSex
             // 
+            this.txtSex.Enabled = false;
             this.txtSex.Location = new System.Drawing.Point(85, 320);
             this.txtSex.Name = "txtSex";
             this.txtSex.ReadOnly = true;
@@ -500,6 +481,7 @@
             // 
             // txtClass
             // 
+            this.txtClass.Enabled = false;
             this.txtClass.Location = new System.Drawing.Point(85, 412);
             this.txtClass.Name = "txtClass";
             this.txtClass.ReadOnly = true;
@@ -509,6 +491,7 @@
             // 
             // txtFullName
             // 
+            this.txtFullName.Enabled = false;
             this.txtFullName.Location = new System.Drawing.Point(85, 289);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.ReadOnly = true;
@@ -517,6 +500,7 @@
             // 
             // txtCode
             // 
+            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(85, 257);
             this.txtCode.Name = "txtCode";
             this.txtCode.ReadOnly = true;
@@ -599,7 +583,5 @@
         private System.Windows.Forms.Button btnchitiet;
         private DevExpress.XtraEditors.TextEdit txtNoCard;
         private DevExpress.XtraEditors.TextEdit txtIdCoPhep;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
     }
 }

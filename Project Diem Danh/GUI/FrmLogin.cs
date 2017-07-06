@@ -15,14 +15,25 @@ namespace Project_Diem_Danh
     public partial class FrmLogin : Form
     {
         RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+         Flashing fl = new Flashing();
         public FrmLogin()
         {
-            Flashing fl = new Flashing();
-            fl.ShowSplash();
-            InitializeComponent();
-            rkApp.SetValue("registryDiemDanh", Application.ExecutablePath.ToString());
-            fl.CloseSplash();
-            this.Activate();
+           try
+           {
+              fl.ShowSplash();
+               InitializeComponent();
+               rkApp.SetValue("registryDiemDanh", Application.ExecutablePath.ToString());
+           }
+            catch(Exception ex)
+           {
+               MessageBox.Show(ex.Message);
+           }
+            finally
+           {
+               // EndFlashing
+               fl.CloseSplash();
+              this.Activate();
+           }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

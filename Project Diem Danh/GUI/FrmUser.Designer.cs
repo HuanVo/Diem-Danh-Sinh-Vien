@@ -34,8 +34,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pnlLayout_ListClass = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtMHPSearch = new DevExpress.XtraEditors.SearchControl();
+            this.btnSearchLop = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateNavigator1 = new DevExpress.XtraScheduler.DateNavigator();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtTotalBuoiHoc = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTenLop = new DevExpress.XtraEditors.TextEdit();
+            this.lblSoLuong = new DevExpress.XtraEditors.TextEdit();
+            this.label2 = new System.Windows.Forms.Label();
             this.GrbInfo = new System.Windows.Forms.GroupBox();
             this.txtMaKhoa = new DevExpress.XtraEditors.TextEdit();
             this.txtFullName = new DevExpress.XtraEditors.TextEdit();
@@ -71,13 +80,6 @@
             this.hộpThưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MAHOCPHAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtTotalBuoiHoc = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblSoLuong = new DevExpress.XtraEditors.TextEdit();
-            this.lblTenLop = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnl_footer_User = new System.Windows.Forms.Panel();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnExportToExcel = new System.Windows.Forms.Button();
@@ -133,8 +135,13 @@
             this.pnl_Info.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMHPSearch.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalBuoiHoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTenLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSoLuong.Properties)).BeginInit();
             this.GrbInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFullName.Properties)).BeginInit();
@@ -143,10 +150,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalBuoiHoc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblSoLuong.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblTenLop.Properties)).BeginInit();
             this.pnl_footer_User.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -168,7 +171,7 @@
             this.pnl_Info.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Info.Location = new System.Drawing.Point(0, 0);
             this.pnl_Info.Name = "pnl_Info";
-            this.pnl_Info.Size = new System.Drawing.Size(1036, 215);
+            this.pnl_Info.Size = new System.Drawing.Size(1196, 215);
             this.pnl_Info.TabIndex = 4;
             // 
             // panel1
@@ -179,19 +182,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1036, 189);
+            this.panel1.Size = new System.Drawing.Size(1196, 189);
             this.panel1.TabIndex = 46;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.pnlLayout_ListClass);
+            this.groupBox2.Controls.Add(this.panel4);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Yellow;
             this.groupBox2.Location = new System.Drawing.Point(390, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(410, 189);
+            this.groupBox2.Size = new System.Drawing.Size(535, 189);
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CÁC HỌC PHẦN QUẢN LÝ";
@@ -200,57 +204,176 @@
             // 
             this.pnlLayout_ListClass.AutoScroll = true;
             this.pnlLayout_ListClass.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLayout_ListClass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlLayout_ListClass.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLayout_ListClass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlLayout_ListClass.ForeColor = System.Drawing.Color.Lime;
-            this.pnlLayout_ListClass.Location = new System.Drawing.Point(3, 17);
+            this.pnlLayout_ListClass.Location = new System.Drawing.Point(3, 44);
             this.pnlLayout_ListClass.Name = "pnlLayout_ListClass";
-            this.pnlLayout_ListClass.Size = new System.Drawing.Size(404, 169);
-            this.pnlLayout_ListClass.TabIndex = 34;
+            this.pnlLayout_ListClass.Size = new System.Drawing.Size(529, 142);
+            this.pnlLayout_ListClass.TabIndex = 37;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtMHPSearch);
+            this.panel4.Controls.Add(this.btnSearchLop);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(3, 17);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(529, 27);
+            this.panel4.TabIndex = 36;
+            // 
+            // txtMHPSearch
+            // 
+            this.txtMHPSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMHPSearch.Location = new System.Drawing.Point(301, 3);
+            this.txtMHPSearch.Name = "txtMHPSearch";
+            this.txtMHPSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.SearchButton(),
+            new DevExpress.XtraEditors.Repository.ClearButton()});
+            this.txtMHPSearch.Properties.NullValuePrompt = "Nhập mã học phần cần tìm...";
+            this.txtMHPSearch.Properties.ShowNullValuePromptWhenFocused = true;
+            this.txtMHPSearch.Size = new System.Drawing.Size(169, 20);
+            this.txtMHPSearch.TabIndex = 0;
+            this.txtMHPSearch.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.searchControl1_ButtonClick);
+            // 
+            // btnSearchLop
+            // 
+            this.btnSearchLop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchLop.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchLop.Appearance.Options.UseFont = true;
+            this.btnSearchLop.Location = new System.Drawing.Point(474, 1);
+            this.btnSearchLop.Name = "btnSearchLop";
+            this.btnSearchLop.Size = new System.Drawing.Size(53, 23);
+            this.btnSearchLop.TabIndex = 52;
+            this.btnSearchLop.Text = "Tìm";
+            this.btnSearchLop.Click += new System.EventHandler(this.btnSearchLop_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateNavigator1);
+            this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Location = new System.Drawing.Point(800, 0);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox1.Location = new System.Drawing.Point(925, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 189);
+            this.groupBox1.Size = new System.Drawing.Size(271, 189);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "THÔNG TIN CHI TIẾT HỌC PHẦN";
             // 
-            // dateNavigator1
+            // panel3
             // 
-            this.dateNavigator1.AppearanceCalendar.BackColor = System.Drawing.Color.Transparent;
-            this.dateNavigator1.AppearanceCalendar.BackColor2 = System.Drawing.Color.Transparent;
-            this.dateNavigator1.AppearanceCalendar.BorderColor = System.Drawing.Color.Transparent;
-            this.dateNavigator1.AppearanceCalendar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNavigator1.AppearanceCalendar.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.dateNavigator1.AppearanceCalendar.ForeColor = System.Drawing.Color.Transparent;
-            this.dateNavigator1.AppearanceCalendar.Options.UseBackColor = true;
-            this.dateNavigator1.AppearanceCalendar.Options.UseBorderColor = true;
-            this.dateNavigator1.AppearanceCalendar.Options.UseFont = true;
-            this.dateNavigator1.AppearanceCalendar.Options.UseForeColor = true;
-            this.dateNavigator1.AppearanceDisabledCalendarDate.BorderColor = System.Drawing.Color.Transparent;
-            this.dateNavigator1.AppearanceDisabledCalendarDate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNavigator1.AppearanceDisabledCalendarDate.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.dateNavigator1.AppearanceDisabledCalendarDate.Options.UseBorderColor = true;
-            this.dateNavigator1.AppearanceDisabledCalendarDate.Options.UseFont = true;
-            this.dateNavigator1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNavigator1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.dateNavigator1.AppearanceHeader.Options.UseFont = true;
-            this.dateNavigator1.AppearanceWeekNumber.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNavigator1.AppearanceWeekNumber.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.dateNavigator1.AppearanceWeekNumber.Options.UseFont = true;
-            this.dateNavigator1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.dateNavigator1.DateTime = new System.DateTime(2017, 2, 18, 0, 0, 0, 0);
-            this.dateNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateNavigator1.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNavigator1.HighlightTodayCell = DevExpress.Utils.DefaultBoolean.Default;
-            this.dateNavigator1.HotDate = null;
-            this.dateNavigator1.Location = new System.Drawing.Point(3, 18);
-            this.dateNavigator1.Name = "dateNavigator1";
-            this.dateNavigator1.Size = new System.Drawing.Size(230, 168);
-            this.dateNavigator1.TabIndex = 51;
+            this.panel3.Controls.Add(this.txtTotalBuoiHoc);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.lblTenLop);
+            this.panel3.Controls.Add(this.lblSoLuong);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 17);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(265, 169);
+            this.panel3.TabIndex = 0;
+            // 
+            // txtTotalBuoiHoc
+            // 
+            this.txtTotalBuoiHoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalBuoiHoc.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtTotalBuoiHoc.Enabled = false;
+            this.txtTotalBuoiHoc.Location = new System.Drawing.Point(118, 79);
+            this.txtTotalBuoiHoc.Name = "txtTotalBuoiHoc";
+            this.txtTotalBuoiHoc.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
+            this.txtTotalBuoiHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalBuoiHoc.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTotalBuoiHoc.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtTotalBuoiHoc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTotalBuoiHoc.Properties.ReadOnly = true;
+            this.txtTotalBuoiHoc.Size = new System.Drawing.Size(140, 22);
+            this.txtTotalBuoiHoc.TabIndex = 50;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(29, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 14);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Học Phần:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(12, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 14);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Tuần đã học:";
+            // 
+            // lblTenLop
+            // 
+            this.lblTenLop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTenLop.Cursor = System.Windows.Forms.Cursors.No;
+            this.lblTenLop.Enabled = false;
+            this.lblTenLop.Location = new System.Drawing.Point(118, 15);
+            this.lblTenLop.Name = "lblTenLop";
+            this.lblTenLop.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
+            this.lblTenLop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenLop.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblTenLop.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTenLop.Properties.Appearance.Options.UseFont = true;
+            this.lblTenLop.Properties.Appearance.Options.UseForeColor = true;
+            this.lblTenLop.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTenLop.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTenLop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblTenLop.Properties.ReadOnly = true;
+            this.lblTenLop.Size = new System.Drawing.Size(140, 22);
+            this.lblTenLop.TabIndex = 46;
+            // 
+            // lblSoLuong
+            // 
+            this.lblSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSoLuong.Cursor = System.Windows.Forms.Cursors.No;
+            this.lblSoLuong.Enabled = false;
+            this.lblSoLuong.Location = new System.Drawing.Point(118, 47);
+            this.lblSoLuong.Name = "lblSoLuong";
+            this.lblSoLuong.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
+            this.lblSoLuong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoLuong.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblSoLuong.Properties.Appearance.Options.UseBackColor = true;
+            this.lblSoLuong.Properties.Appearance.Options.UseFont = true;
+            this.lblSoLuong.Properties.Appearance.Options.UseForeColor = true;
+            this.lblSoLuong.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblSoLuong.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblSoLuong.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblSoLuong.Properties.ReadOnly = true;
+            this.lblSoLuong.Size = new System.Drawing.Size(140, 22);
+            this.lblSoLuong.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(26, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 14);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Số Tín Chỉ:";
             // 
             // GrbInfo
             // 
@@ -280,10 +403,11 @@
             // txtMaKhoa
             // 
             this.txtMaKhoa.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtMaKhoa.Enabled = false;
             this.txtMaKhoa.Location = new System.Drawing.Point(25, 143);
             this.txtMaKhoa.Name = "txtMaKhoa";
             this.txtMaKhoa.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.txtMaKhoa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKhoa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtMaKhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txtMaKhoa.Properties.Appearance.Options.UseFont = true;
@@ -298,10 +422,11 @@
             // txtFullName
             // 
             this.txtFullName.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtFullName.Enabled = false;
             this.txtFullName.Location = new System.Drawing.Point(25, 93);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.txtFullName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtFullName.Properties.Appearance.Options.UseBackColor = true;
             this.txtFullName.Properties.Appearance.Options.UseFont = true;
@@ -316,10 +441,11 @@
             // txtAddress
             // 
             this.txtAddress.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtAddress.Enabled = false;
             this.txtAddress.Location = new System.Drawing.Point(197, 47);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.Properties.Appearance.Options.UseBackColor = true;
             this.txtAddress.Properties.Appearance.Options.UseFont = true;
@@ -358,10 +484,11 @@
             // txtPhone
             // 
             this.txtPhone.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtPhone.Enabled = false;
             this.txtPhone.Location = new System.Drawing.Point(197, 143);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtPhone.Properties.Appearance.Options.UseBackColor = true;
             this.txtPhone.Properties.Appearance.Options.UseFont = true;
@@ -424,10 +551,11 @@
             // txtemail
             // 
             this.txtemail.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtemail.Enabled = false;
             this.txtemail.Location = new System.Drawing.Point(197, 93);
             this.txtemail.Name = "txtemail";
             this.txtemail.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.txtemail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtemail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtemail.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtemail.Properties.Appearance.Options.UseBackColor = true;
             this.txtemail.Properties.Appearance.Options.UseFont = true;
@@ -442,10 +570,11 @@
             // txtID
             // 
             this.txtID.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(25, 47);
             this.txtID.Name = "txtID";
             this.txtID.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.txtID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtID.Properties.Appearance.Options.UseBackColor = true;
             this.txtID.Properties.Appearance.Options.UseFont = true;
@@ -468,7 +597,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1036, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(1196, 26);
             this.menuStrip1.TabIndex = 45;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -660,113 +789,6 @@
             this.MAHOCPHAN.Visible = true;
             this.MAHOCPHAN.VisibleIndex = 4;
             // 
-            // panel3
-            // 
-            this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.txtTotalBuoiHoc);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.lblSoLuong);
-            this.panel3.Controls.Add(this.lblTenLop);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 215);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1036, 44);
-            this.panel3.TabIndex = 39;
-            // 
-            // txtTotalBuoiHoc
-            // 
-            this.txtTotalBuoiHoc.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtTotalBuoiHoc.Location = new System.Drawing.Point(508, 8);
-            this.txtTotalBuoiHoc.Name = "txtTotalBuoiHoc";
-            this.txtTotalBuoiHoc.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.txtTotalBuoiHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalBuoiHoc.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseBackColor = true;
-            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseFont = true;
-            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseForeColor = true;
-            this.txtTotalBuoiHoc.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtTotalBuoiHoc.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtTotalBuoiHoc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtTotalBuoiHoc.Properties.ReadOnly = true;
-            this.txtTotalBuoiHoc.Size = new System.Drawing.Size(43, 24);
-            this.txtTotalBuoiHoc.TabIndex = 41;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(330, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 14);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Số buổi đã học:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(202, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 14);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Số Tín Chỉ:";
-            // 
-            // lblSoLuong
-            // 
-            this.lblSoLuong.Cursor = System.Windows.Forms.Cursors.No;
-            this.lblSoLuong.Location = new System.Drawing.Point(323, 8);
-            this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.lblSoLuong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblSoLuong.Properties.Appearance.Options.UseBackColor = true;
-            this.lblSoLuong.Properties.Appearance.Options.UseFont = true;
-            this.lblSoLuong.Properties.Appearance.Options.UseForeColor = true;
-            this.lblSoLuong.Properties.Appearance.Options.UseTextOptions = true;
-            this.lblSoLuong.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblSoLuong.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblSoLuong.Properties.ReadOnly = true;
-            this.lblSoLuong.Size = new System.Drawing.Size(43, 24);
-            this.lblSoLuong.TabIndex = 38;
-            // 
-            // lblTenLop
-            // 
-            this.lblTenLop.Cursor = System.Windows.Forms.Cursors.No;
-            this.lblTenLop.Location = new System.Drawing.Point(88, 9);
-            this.lblTenLop.Name = "lblTenLop";
-            this.lblTenLop.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
-            this.lblTenLop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenLop.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblTenLop.Properties.Appearance.Options.UseBackColor = true;
-            this.lblTenLop.Properties.Appearance.Options.UseFont = true;
-            this.lblTenLop.Properties.Appearance.Options.UseForeColor = true;
-            this.lblTenLop.Properties.Appearance.Options.UseTextOptions = true;
-            this.lblTenLop.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblTenLop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblTenLop.Properties.ReadOnly = true;
-            this.lblTenLop.Size = new System.Drawing.Size(140, 24);
-            this.lblTenLop.TabIndex = 37;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(3, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 14);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Học Phần:";
-            // 
             // pnl_footer_User
             // 
             this.pnl_footer_User.BackColor = System.Drawing.Color.Transparent;
@@ -778,7 +800,7 @@
             this.pnl_footer_User.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_footer_User.Location = new System.Drawing.Point(0, 608);
             this.pnl_footer_User.Name = "pnl_footer_User";
-            this.pnl_footer_User.Size = new System.Drawing.Size(1036, 39);
+            this.pnl_footer_User.Size = new System.Drawing.Size(1196, 39);
             this.pnl_footer_User.TabIndex = 40;
             // 
             // btnPrint
@@ -792,7 +814,7 @@
             this.btnPrint.ForeColor = System.Drawing.Color.Black;
             this.btnPrint.Image = global::Project_Diem_Danh.Properties.Resources.Print_24px;
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(730, 2);
+            this.btnPrint.Location = new System.Drawing.Point(890, 2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(80, 37);
             this.btnPrint.TabIndex = 3;
@@ -812,7 +834,7 @@
             this.btnExportToExcel.ForeColor = System.Drawing.Color.Black;
             this.btnExportToExcel.Image = global::Project_Diem_Danh.Properties.Resources.export_excel_icon_24x24;
             this.btnExportToExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportToExcel.Location = new System.Drawing.Point(814, 2);
+            this.btnExportToExcel.Location = new System.Drawing.Point(974, 2);
             this.btnExportToExcel.Name = "btnExportToExcel";
             this.btnExportToExcel.Size = new System.Drawing.Size(134, 38);
             this.btnExportToExcel.TabIndex = 2;
@@ -832,7 +854,7 @@
             this.btnDiemDanh.ForeColor = System.Drawing.Color.Black;
             this.btnDiemDanh.Image = global::Project_Diem_Danh.Properties.Resources.user;
             this.btnDiemDanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDiemDanh.Location = new System.Drawing.Point(618, 2);
+            this.btnDiemDanh.Location = new System.Drawing.Point(778, 2);
             this.btnDiemDanh.Name = "btnDiemDanh";
             this.btnDiemDanh.Size = new System.Drawing.Size(110, 38);
             this.btnDiemDanh.TabIndex = 1;
@@ -852,7 +874,7 @@
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.Image = global::Project_Diem_Danh.Properties.Resources.Exit_24px;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(954, 2);
+            this.btnExit.Location = new System.Drawing.Point(1114, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(79, 38);
             this.btnExit.TabIndex = 0;
@@ -866,9 +888,9 @@
             this.panel2.BackColor = System.Drawing.Color.Green;
             this.panel2.Controls.Add(this.tabControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 259);
+            this.panel2.Location = new System.Drawing.Point(0, 215);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1036, 349);
+            this.panel2.Size = new System.Drawing.Size(1196, 393);
             this.panel2.TabIndex = 41;
             // 
             // tabControl1
@@ -879,7 +901,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1036, 349);
+            this.tabControl1.Size = new System.Drawing.Size(1196, 393);
             this.tabControl1.TabIndex = 23;
             // 
             // tbpDuLieuTho
@@ -888,7 +910,7 @@
             this.tbpDuLieuTho.Location = new System.Drawing.Point(4, 23);
             this.tbpDuLieuTho.Name = "tbpDuLieuTho";
             this.tbpDuLieuTho.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpDuLieuTho.Size = new System.Drawing.Size(1028, 322);
+            this.tbpDuLieuTho.Size = new System.Drawing.Size(1188, 366);
             this.tbpDuLieuTho.TabIndex = 0;
             this.tbpDuLieuTho.Text = "Thống Kê Theo Tuần";
             this.tbpDuLieuTho.UseVisualStyleBackColor = true;
@@ -907,7 +929,7 @@
             this.grdDuLieuTho.Location = new System.Drawing.Point(3, 3);
             this.grdDuLieuTho.MainView = this.gridView1;
             this.grdDuLieuTho.Name = "grdDuLieuTho";
-            this.grdDuLieuTho.Size = new System.Drawing.Size(1022, 316);
+            this.grdDuLieuTho.Size = new System.Drawing.Size(1182, 360);
             this.grdDuLieuTho.TabIndex = 18;
             this.grdDuLieuTho.UseEmbeddedNavigator = true;
             this.grdDuLieuTho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -915,6 +937,8 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView1.Appearance.Row.Options.UseTextOptions = true;
@@ -1018,7 +1042,7 @@
             this.tbpDuLieuChuan.Location = new System.Drawing.Point(4, 23);
             this.tbpDuLieuChuan.Name = "tbpDuLieuChuan";
             this.tbpDuLieuChuan.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpDuLieuChuan.Size = new System.Drawing.Size(1028, 322);
+            this.tbpDuLieuChuan.Size = new System.Drawing.Size(1188, 366);
             this.tbpDuLieuChuan.TabIndex = 1;
             this.tbpDuLieuChuan.Text = "Thống Kê Theo Học Kỳ";
             this.tbpDuLieuChuan.UseVisualStyleBackColor = true;
@@ -1036,7 +1060,7 @@
             this.grdDuLieuChuan.Location = new System.Drawing.Point(3, 3);
             this.grdDuLieuChuan.MainView = this.gridView2;
             this.grdDuLieuChuan.Name = "grdDuLieuChuan";
-            this.grdDuLieuChuan.Size = new System.Drawing.Size(1022, 316);
+            this.grdDuLieuChuan.Size = new System.Drawing.Size(1182, 360);
             this.grdDuLieuChuan.TabIndex = 19;
             this.grdDuLieuChuan.UseEmbeddedNavigator = true;
             this.grdDuLieuChuan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1051,6 +1075,8 @@
             this.gridView2.Appearance.ColumnFilterButton.Options.UseBackColor = true;
             this.gridView2.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
             this.gridView2.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gridView2.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView2.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridView2.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.gridView2.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridView2.Appearance.Row.Options.UseTextOptions = true;
@@ -1427,11 +1453,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = global::Project_Diem_Danh.Properties.Resources.Backdround;
-            this.ClientSize = new System.Drawing.Size(1036, 647);
+            this.ClientSize = new System.Drawing.Size(1196, 647);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_footer_User);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnl_Info);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1440,14 +1465,20 @@
             this.Name = "FrmUser";
             this.ShowMdiChildCaptionInParentTitle = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hệ Thống Quản Lí Sinh Viên";
+            this.Text = "Hệ Thống Quản Lí Điểm Danh Sinh Viên";
             this.Load += new System.EventHandler(this.FrmUser_Load);
             this.pnl_Info.ResumeLayout(false);
             this.pnl_Info.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtMHPSearch.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalBuoiHoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTenLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSoLuong.Properties)).EndInit();
             this.GrbInfo.ResumeLayout(false);
             this.GrbInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).EndInit();
@@ -1458,11 +1489,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalBuoiHoc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblSoLuong.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblTenLop.Properties)).EndInit();
             this.pnl_footer_User.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -1513,11 +1539,6 @@
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit txtemail;
         private DevExpress.XtraEditors.TextEdit txtID;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit lblSoLuong;
-        private DevExpress.XtraEditors.TextEdit lblTenLop;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnl_footer_User;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnExportToExcel;
@@ -1525,8 +1546,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem thiếtLậpToolStripMenuItem;
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit txtTotalBuoiHoc;
         private System.Windows.Forms.ToolStripMenuItem hướngDẫnSửDụngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hộpThưToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -1576,9 +1595,18 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.FlowLayoutPanel pnlLayout_ListClass;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraScheduler.DateNavigator dateNavigator1;
+        private System.Windows.Forms.Panel panel3;
+        private DevExpress.XtraEditors.SimpleButton btnSearchLop;
+        private DevExpress.XtraEditors.TextEdit txtTotalBuoiHoc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.TextEdit lblTenLop;
+        private DevExpress.XtraEditors.TextEdit lblSoLuong;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel pnlLayout_ListClass;
+        private System.Windows.Forms.Panel panel4;
+        private DevExpress.XtraEditors.SearchControl txtMHPSearch;
 
 
     }

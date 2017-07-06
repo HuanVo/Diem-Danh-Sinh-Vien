@@ -113,5 +113,12 @@ namespace Project_Diem_Danh.DAO
             }
             return kq;
         }
+        public DataTable LoadDulieuThongkeBaocao(String MaHP)
+        {
+            DataTable dt = new DataTable();
+            String sql_cmd = @"EXEC LoadDulieuThongkeBaocao '"+MaHP +"'";
+            dt = DataProvider.Instance.LoadAllTable(sql_cmd);
+            return dt;
+        }
     }
 }

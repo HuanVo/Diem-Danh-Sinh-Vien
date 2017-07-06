@@ -18,7 +18,6 @@ using System.IO;
 using Project_Diem_Danh.Report;
 using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
-
 namespace Project_Diem_Danh
 {
     public partial class FrmRollCall : DevExpress.XtraEditors.XtraForm
@@ -303,8 +302,7 @@ namespace Project_Diem_Danh
                     }
                     else
                     {
-                        ShowMessageResult(ID+ " không đăng ký môn học này!", 0);
-                        
+                        ShowMessageResult(ID+ " không đăng ký học phần này!", 0);
                     }
             }
             else
