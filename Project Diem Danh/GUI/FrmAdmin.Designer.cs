@@ -408,8 +408,8 @@
             this.backstageViewControl3.Location = new System.Drawing.Point(0, 0);
             this.backstageViewControl3.Name = "backstageViewControl3";
             this.backstageViewControl3.PaintStyle = DevExpress.XtraBars.Ribbon.BackstageViewPaintStyle.Flat;
-            this.backstageViewControl3.SelectedTab = this.backstageViewTabItem6;
-            this.backstageViewControl3.SelectedTabIndex = 6;
+            this.backstageViewControl3.SelectedTab = this.backstageViewTabItem4;
+            this.backstageViewControl3.SelectedTabIndex = 8;
             this.backstageViewControl3.Size = new System.Drawing.Size(1304, 581);
             this.backstageViewControl3.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2010;
             this.backstageViewControl3.TabIndex = 2;
@@ -2850,7 +2850,7 @@
             this.backstageViewTabItem6.ContentControl = this.backstageViewClientControl5;
             this.backstageViewTabItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewTabItem6.Glyph")));
             this.backstageViewTabItem6.Name = "backstageViewTabItem6";
-            this.backstageViewTabItem6.Selected = true;
+            this.backstageViewTabItem6.Selected = false;
             toolTipItem3.Text = "Lập báo cáo thống kê kết quả điểm danh theo học phần";
             superToolTip3.Items.Add(toolTipItem3);
             this.backstageViewTabItem6.SuperTip = superToolTip3;
@@ -2867,7 +2867,7 @@
             this.backstageViewTabItem4.ContentControl = this.backstageViewClientControl3;
             this.backstageViewTabItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewTabItem4.Glyph")));
             this.backstageViewTabItem4.Name = "backstageViewTabItem4";
-            this.backstageViewTabItem4.Selected = false;
+            this.backstageViewTabItem4.Selected = true;
             toolTipItem4.Appearance.Image = global::Project_Diem_Danh.Properties.Resources.help;
             toolTipItem4.Appearance.Options.UseImage = true;
             toolTipItem4.Image = global::Project_Diem_Danh.Properties.Resources.help;
