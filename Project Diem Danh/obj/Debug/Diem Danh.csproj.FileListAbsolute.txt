@@ -714,3 +714,7 @@ E:\OneDrive\ITC_2017\QLSV\Du An\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\
 E:\OneDrive\ITC_2017\QLSV\Du An\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.exe.licenses
 E:\OneDrive\ITC_2017\QLSV\Du An\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\RdlCompile.cache
 E:\OneDrive\ITC_2017\QLSV\Du An\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\RdlCompile.compiled
+D:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\bin\Debug\Diem Danh.exe.config
+D:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.csproj.ResolveComReference.cache
+D:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.exe
+D:\GITHUB\Diem-Danh-Sinh-Vien\Project Diem Danh\obj\Debug\Diem Danh.pdb
