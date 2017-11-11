@@ -39,6 +39,8 @@
             this.btnSearchLop = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtNhomHP = new DevExpress.XtraEditors.TextEdit();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtTotalBuoiHoc = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -139,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMHPSearch.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNhomHP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalBuoiHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTenLop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSoLuong.Properties)).BeginInit();
@@ -226,14 +229,14 @@
             // txtMHPSearch
             // 
             this.txtMHPSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMHPSearch.Location = new System.Drawing.Point(301, 3);
+            this.txtMHPSearch.Location = new System.Drawing.Point(269, 3);
             this.txtMHPSearch.Name = "txtMHPSearch";
             this.txtMHPSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.SearchButton(),
             new DevExpress.XtraEditors.Repository.ClearButton()});
-            this.txtMHPSearch.Properties.NullValuePrompt = "Nhập mã học phần cần tìm...";
+            this.txtMHPSearch.Properties.NullValuePrompt = "Nhập mã nhóm học phần cần tìm...";
             this.txtMHPSearch.Properties.ShowNullValuePromptWhenFocused = true;
-            this.txtMHPSearch.Size = new System.Drawing.Size(169, 20);
+            this.txtMHPSearch.Size = new System.Drawing.Size(201, 20);
             this.txtMHPSearch.TabIndex = 0;
             this.txtMHPSearch.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.searchControl1_ButtonClick);
             // 
@@ -264,6 +267,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtNhomHP);
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.txtTotalBuoiHoc);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label3);
@@ -276,12 +281,45 @@
             this.panel3.Size = new System.Drawing.Size(265, 169);
             this.panel3.TabIndex = 0;
             // 
+            // txtNhomHP
+            // 
+            this.txtNhomHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNhomHP.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtNhomHP.Enabled = false;
+            this.txtNhomHP.Location = new System.Drawing.Point(118, 44);
+            this.txtNhomHP.Name = "txtNhomHP";
+            this.txtNhomHP.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
+            this.txtNhomHP.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhomHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtNhomHP.Properties.Appearance.Options.UseBackColor = true;
+            this.txtNhomHP.Properties.Appearance.Options.UseFont = true;
+            this.txtNhomHP.Properties.Appearance.Options.UseForeColor = true;
+            this.txtNhomHP.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtNhomHP.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtNhomHP.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtNhomHP.Properties.ReadOnly = true;
+            this.txtNhomHP.Size = new System.Drawing.Size(140, 22);
+            this.txtNhomHP.TabIndex = 52;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(51, 47);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 14);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Nhóm:";
+            // 
             // txtTotalBuoiHoc
             // 
             this.txtTotalBuoiHoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotalBuoiHoc.Cursor = System.Windows.Forms.Cursors.No;
             this.txtTotalBuoiHoc.Enabled = false;
-            this.txtTotalBuoiHoc.Location = new System.Drawing.Point(118, 79);
+            this.txtTotalBuoiHoc.Location = new System.Drawing.Point(118, 107);
             this.txtTotalBuoiHoc.Name = "txtTotalBuoiHoc";
             this.txtTotalBuoiHoc.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.txtTotalBuoiHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -316,7 +354,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 81);
+            this.label3.Location = new System.Drawing.Point(12, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 14);
             this.label3.TabIndex = 49;
@@ -347,7 +385,7 @@
             this.lblSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSoLuong.Cursor = System.Windows.Forms.Cursors.No;
             this.lblSoLuong.Enabled = false;
-            this.lblSoLuong.Location = new System.Drawing.Point(118, 47);
+            this.lblSoLuong.Location = new System.Drawing.Point(118, 74);
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Properties.Appearance.BackColor = System.Drawing.Color.LightGray;
             this.lblSoLuong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -369,7 +407,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(26, 50);
+            this.label2.Location = new System.Drawing.Point(26, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 14);
             this.label2.TabIndex = 48;
@@ -997,7 +1035,7 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Mã Học Phần";
-            this.gridColumn1.FieldName = "MAHOCPHAN";
+            this.gridColumn1.FieldName = "MANHOM";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
@@ -1160,7 +1198,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Mã Học Phần";
-            this.gridColumn4.FieldName = "MAHOCPHAN";
+            this.gridColumn4.FieldName = "MANHOM";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
@@ -1476,6 +1514,7 @@
             this.groupBox1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNhomHP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalBuoiHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblTenLop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblSoLuong.Properties)).EndInit();
@@ -1607,6 +1646,8 @@
         private System.Windows.Forms.FlowLayoutPanel pnlLayout_ListClass;
         private System.Windows.Forms.Panel panel4;
         private DevExpress.XtraEditors.SearchControl txtMHPSearch;
+        private DevExpress.XtraEditors.TextEdit txtNhomHP;
+        private System.Windows.Forms.Label label10;
 
 
     }

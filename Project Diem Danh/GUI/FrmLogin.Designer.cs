@@ -256,7 +256,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FrmLogin_HelpButtonClicked);
-            this.Load += new System.EventHandler(this.FrmLogin_Load);
+            
             this.pnl_footer_Login.ResumeLayout(false);
             this.pnl_footer_Login.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

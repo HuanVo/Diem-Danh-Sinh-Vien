@@ -139,8 +139,10 @@
     <Compile Include="DAO\KhoaDAO.cs" />
     <Compile Include="DAO\LopDAO.cs" />
     <Compile Include="DAO\MappingCode_Id.cs" />
+    <Compile Include="DAO\NhomDAO.cs" />
     <Compile Include="DAO\TempDiemDanhDAO.cs" />
     <Compile Include="DAO\TrangThaiTuanHocDAO.cs" />
+    <Compile Include="DTO\Nhom.cs" />
     <Compile Include="GUI\Deltail_Imagecs.cs">
       <SubType>Form</SubType>
     </Compile>

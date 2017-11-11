@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -95,7 +95,7 @@
             this.MAHOCPHAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TENHOCPHAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SOTINCHI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MAGIANGVIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -112,7 +112,6 @@
             this.txtSoTCedit = new System.Windows.Forms.TextBox();
             this.txtTenHPedit = new System.Windows.Forms.TextBox();
             this.txtMaHPedit = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -258,6 +257,7 @@
             this.backstageViewTabItem4 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewItemSeparator5 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
             this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl3)).BeginInit();
@@ -408,8 +408,8 @@
             this.backstageViewControl3.Location = new System.Drawing.Point(0, 0);
             this.backstageViewControl3.Name = "backstageViewControl3";
             this.backstageViewControl3.PaintStyle = DevExpress.XtraBars.Ribbon.BackstageViewPaintStyle.Flat;
-            this.backstageViewControl3.SelectedTab = this.backstageViewTabItem4;
-            this.backstageViewControl3.SelectedTabIndex = 8;
+            this.backstageViewControl3.SelectedTab = this.backstageViewTabItem5;
+            this.backstageViewControl3.SelectedTabIndex = 4;
             this.backstageViewControl3.Size = new System.Drawing.Size(1304, 581);
             this.backstageViewControl3.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2010;
             this.backstageViewControl3.TabIndex = 2;
@@ -444,11 +444,11 @@
             this.gridcData.Location = new System.Drawing.Point(0, 0);
             this.gridcData.Name = "gridcData";
             this.gridcData.RowHeadersWidth = 30;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.gridcData.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.gridcData.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridcData.Size = new System.Drawing.Size(1144, 541);
             this.gridcData.TabIndex = 0;
             // 
@@ -614,12 +614,12 @@
             this.cbbgetTableName.Items.AddRange(new object[] {
             "Dữ Liệu Điểm Danh Tuần",
             "Dữ Liệu Điểm Danh Học Kỳ",
-            "Dữ liệu Sinh Viên",
-            "Dữ liệu Giảng Viên",
+            "Dữ Liệu Sinh Viên",
+            "Dữ Liệu Giảng Viên",
             "Dữ liệu Khoa",
-            "Dữ liệu Lớp",
-            "Dữ liệu Học Phần",
-            "Dữ liệu trạng thái tuần học"});
+            "Dữ Liệu Lớp",
+            "Dữ Liệu Học Phần",
+            "Dữ Liệu Nhóm Học Phần"});
             this.cbbgetTableName.Location = new System.Drawing.Point(9, 9);
             this.cbbgetTableName.Name = "cbbgetTableName";
             this.cbbgetTableName.Size = new System.Drawing.Size(164, 21);
@@ -721,7 +721,9 @@
             this.checkBox.Location = new System.Drawing.Point(817, 90);
             this.checkBox.Name = "checkBox";
             this.checkBox.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox.Properties.Appearance.ForeColor = System.Drawing.Color.White;
             this.checkBox.Properties.Appearance.Options.UseFont = true;
+            this.checkBox.Properties.Appearance.Options.UseForeColor = true;
             this.checkBox.Properties.Caption = "Xóa dữ liệu cũ";
             this.checkBox.Size = new System.Drawing.Size(101, 19);
             this.checkBox.TabIndex = 24;
@@ -909,12 +911,12 @@
             this.cbbAllTable.Items.AddRange(new object[] {
             "Dữ Liệu Điểm Danh Tuần",
             "Dữ Liệu Điểm Danh Học Kỳ",
-            "Dữ liệu Sinh Viên",
-            "Dữ liệu Giảng Viên",
-            "Dữ liệu Khoa",
-            "Dữ liệu Lớp",
-            "Dữ liệu Học Phần",
-            "Dữ liệu trạng thái tuần học"});
+            "Dữ Liệu Sinh Viên",
+            "Dữ Liệu Giảng Viên",
+            "Dữ Liệu Khoa",
+            "Dữ Liệu Lớp",
+            "Dữ Liệu Học Phần",
+            "Dữ Liệu Nhóm Học Phần"});
             this.cbbAllTable.Location = new System.Drawing.Point(364, 42);
             this.cbbAllTable.Name = "cbbAllTable";
             this.cbbAllTable.Size = new System.Drawing.Size(213, 22);
@@ -1028,7 +1030,7 @@
             this.MAHOCPHAN,
             this.TENHOCPHAN,
             this.SOTINCHI,
-            this.MAGIANGVIEN});
+            this.MAKHOA});
             this.gridView1.GridControl = this.gridHocPhanAdmin;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
@@ -1068,14 +1070,14 @@
             this.SOTINCHI.Visible = true;
             this.SOTINCHI.VisibleIndex = 2;
             // 
-            // MAGIANGVIEN
+            // MAKHOA
             // 
-            this.MAGIANGVIEN.Caption = "Mã Giảng Viên";
-            this.MAGIANGVIEN.FieldName = "MAGIANGVIEN";
-            this.MAGIANGVIEN.Name = "MAGIANGVIEN";
-            this.MAGIANGVIEN.OptionsColumn.AllowEdit = false;
-            this.MAGIANGVIEN.Visible = true;
-            this.MAGIANGVIEN.VisibleIndex = 3;
+            this.MAKHOA.Caption = "Mã Khoa";
+            this.MAKHOA.FieldName = "MAKHOA";
+            this.MAKHOA.Name = "MAKHOA";
+            this.MAKHOA.OptionsColumn.AllowEdit = false;
+            this.MAKHOA.Visible = true;
+            this.MAKHOA.VisibleIndex = 3;
             // 
             // gridView3
             // 
@@ -1154,6 +1156,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label10);
             this.groupBox6.Controls.Add(this.txmMaGVedit);
             this.groupBox6.Controls.Add(this.label19);
             this.groupBox6.Controls.Add(this.lblkqedit);
@@ -1162,7 +1165,6 @@
             this.groupBox6.Controls.Add(this.txtSoTCedit);
             this.groupBox6.Controls.Add(this.txtTenHPedit);
             this.groupBox6.Controls.Add(this.txtMaHPedit);
-            this.groupBox6.Controls.Add(this.label10);
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.label16);
             this.groupBox6.Controls.Add(this.label17);
@@ -1258,23 +1260,12 @@
             this.txtMaHPedit.Size = new System.Drawing.Size(193, 23);
             this.txtMaHPedit.TabIndex = 13;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(74, 137);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 14);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Giảng viên:";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(79, 98);
+            this.label15.Location = new System.Drawing.Point(79, 104);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(69, 14);
             this.label15.TabIndex = 11;
@@ -1398,18 +1389,18 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(73, 138);
+            this.label14.Location = new System.Drawing.Point(68, 138);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 14);
+            this.label14.Size = new System.Drawing.Size(83, 14);
             this.label14.TabIndex = 12;
-            this.label14.Text = "Giảng viên:";
+            this.label14.Text = "Thuộc Khoa:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(78, 100);
+            this.label13.Location = new System.Drawing.Point(81, 105);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(69, 14);
             this.label13.TabIndex = 11;
@@ -1463,9 +1454,9 @@
             // gridiemDanhDL
             // 
             this.gridiemDanhDL.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.gridiemDanhDL.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode3});
             this.gridiemDanhDL.Location = new System.Drawing.Point(0, 252);
             this.gridiemDanhDL.MainView = this.gridView2;
             this.gridiemDanhDL.Name = "gridiemDanhDL";
@@ -2383,9 +2374,9 @@
             // gridReport
             // 
             this.gridReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridReport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gridReport.Location = new System.Drawing.Point(0, 0);
             this.gridReport.MainView = this.gridView6;
             this.gridReport.Name = "gridReport";
@@ -2800,12 +2791,12 @@
             this.backstageViewTabItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewTabItem3.Glyph")));
             this.backstageViewTabItem3.Name = "backstageViewTabItem3";
             this.backstageViewTabItem3.Selected = false;
-            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
-            toolTipItem1.Text = "Quản lý thống kê, in ấn dữ liệu";
-            superToolTip1.Items.Add(toolTipItem1);
-            this.backstageViewTabItem3.SuperTip = superToolTip1;
+            toolTipItem5.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem5.Appearance.Options.UseImage = true;
+            toolTipItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem5.Image")));
+            toolTipItem5.Text = "Quản lý thống kê, in ấn dữ liệu";
+            superToolTip5.Items.Add(toolTipItem5);
+            this.backstageViewTabItem3.SuperTip = superToolTip5;
             // 
             // backstageViewItemSeparator3
             // 
@@ -2820,12 +2811,12 @@
             this.backstageViewTabItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewTabItem2.Glyph")));
             this.backstageViewTabItem2.Name = "backstageViewTabItem2";
             this.backstageViewTabItem2.Selected = false;
-            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
-            toolTipItem2.Text = "Cập nhật, xuất dữ liệu";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.backstageViewTabItem2.SuperTip = superToolTip2;
+            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
+            toolTipItem1.Text = "Cập nhật, xuất dữ liệu";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.backstageViewTabItem2.SuperTip = superToolTip1;
             // 
             // backstageViewItemSeparator4
             // 
@@ -2837,7 +2828,7 @@
             this.backstageViewTabItem5.ContentControl = this.backstageViewClientControl4;
             this.backstageViewTabItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewTabItem5.Glyph")));
             this.backstageViewTabItem5.Name = "backstageViewTabItem5";
-            this.backstageViewTabItem5.Selected = false;
+            this.backstageViewTabItem5.Selected = true;
             this.backstageViewTabItem5.SelectedChanged += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewTabItem5_SelectedChanged);
             // 
             // backstageViewItemSeparator6
@@ -2851,9 +2842,9 @@
             this.backstageViewTabItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewTabItem6.Glyph")));
             this.backstageViewTabItem6.Name = "backstageViewTabItem6";
             this.backstageViewTabItem6.Selected = false;
-            toolTipItem3.Text = "Lập báo cáo thống kê kết quả điểm danh theo học phần";
-            superToolTip3.Items.Add(toolTipItem3);
-            this.backstageViewTabItem6.SuperTip = superToolTip3;
+            toolTipItem2.Text = "Lập báo cáo thống kê kết quả điểm danh theo học phần";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.backstageViewTabItem6.SuperTip = superToolTip2;
             // 
             // backstageViewItemSeparator2
             // 
@@ -2867,13 +2858,13 @@
             this.backstageViewTabItem4.ContentControl = this.backstageViewClientControl3;
             this.backstageViewTabItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewTabItem4.Glyph")));
             this.backstageViewTabItem4.Name = "backstageViewTabItem4";
-            this.backstageViewTabItem4.Selected = true;
-            toolTipItem4.Appearance.Image = global::Project_Diem_Danh.Properties.Resources.help;
-            toolTipItem4.Appearance.Options.UseImage = true;
-            toolTipItem4.Image = global::Project_Diem_Danh.Properties.Resources.help;
-            toolTipItem4.Text = "Hướng dẫn sữ dụng trang quản trị";
-            superToolTip4.Items.Add(toolTipItem4);
-            this.backstageViewTabItem4.SuperTip = superToolTip4;
+            this.backstageViewTabItem4.Selected = false;
+            toolTipItem3.Appearance.Image = global::Project_Diem_Danh.Properties.Resources.help;
+            toolTipItem3.Appearance.Options.UseImage = true;
+            toolTipItem3.Image = global::Project_Diem_Danh.Properties.Resources.help;
+            toolTipItem3.Text = "Hướng dẫn sữ dụng trang quản trị";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.backstageViewTabItem4.SuperTip = superToolTip3;
             // 
             // backstageViewItemSeparator5
             // 
@@ -2886,6 +2877,17 @@
             this.backstageViewTabItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewTabItem1.Glyph")));
             this.backstageViewTabItem1.Name = "backstageViewTabItem1";
             this.backstageViewTabItem1.Selected = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(67, 139);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 14);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Thuộc Khoa:";
             // 
             // FrmAdmin
             // 
@@ -3058,7 +3060,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn MAHOCPHAN;
         private DevExpress.XtraGrid.Columns.GridColumn TENHOCPHAN;
         private DevExpress.XtraGrid.Columns.GridColumn SOTINCHI;
-        private DevExpress.XtraGrid.Columns.GridColumn MAGIANGVIEN;
+        private DevExpress.XtraGrid.Columns.GridColumn MAKHOA;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label lblkqxoa;
@@ -3073,7 +3075,6 @@
         private System.Windows.Forms.TextBox txtSoTCedit;
         private System.Windows.Forms.TextBox txtTenHPedit;
         private System.Windows.Forms.TextBox txtMaHPedit;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
@@ -3206,6 +3207,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label10;
 
     }
 }

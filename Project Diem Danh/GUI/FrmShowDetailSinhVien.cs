@@ -68,15 +68,15 @@ namespace Project_Diem_Danh
                     int sobh = getSoBuoiHoc(MaHP);
                     if (sobh != -1)
                     {
-                        txtsobuoihoc.Text = dd.SoBuoiHoc.ToString()+"/"+sobh.ToString();
+                        txtsobuoihoc.Text = string.Format("{0}/{1}", dd.SoBuoiHoc, sobh);
                         txtsobuoiphep.Text = dd.SoBuoiPhep.ToString();
-                        txtsobuoivang.Text = (sobh - dd.SoBuoiHoc - dd.SoBuoiPhep).ToString() + "/" + sobh.ToString();
+                        txtsobuoivang.Text = string.Format("{0}/{1}", sobh - dd.SoBuoiHoc - dd.SoBuoiPhep, sobh);
                     }else
                     {
                         txtsobuoihoc.Text = dd.SoBuoiHoc.ToString();
                         txtsobuoiphep.Text = dd.SoBuoiPhep.ToString();
                     }
-                    txtmahp.Text = dd.Mamonhoc.ToString();
+                    
                     txthocky.Text = dd.Hocky.ToString();
                     //Adding columns to datatable
                     dt.Columns.Add("tuan", typeof(int));
@@ -131,8 +131,8 @@ namespace Project_Diem_Danh
             int kq = -1;
             try
             {
-                TrangThaiTuanHoc tt = TrangThaiTuanHocDAO.Instance.getTrangThaiTuanHocByMaHocPhan(Mahp);
-                kq = tt.Trangthai;
+                DataRow DT = NhomDAO.Instance.getHocPhanByID(Mahp);
+                kq = Convert.ToInt32(DT["SOBUOIHOC"].ToString());
             }
             catch(Exception ex)
             {
@@ -145,10 +145,11 @@ namespace Project_Diem_Danh
         {
             try
             {
-                HocPhan hp;
-                hp = HocPhanDAO.Instance.getHocPhanByID(MaHP);
-                txttenhp.Text = hp.TenHocPhan.ToString();
-                txtsotc.Text = hp.SoTinChi.ToString();
+                DataRow hp = NhomDAO.Instance.getHocPhanByID(MaHP);
+                txttenhp.Text = hp["TENHOCPHAN"].ToString();
+                txtsotc.Text = hp["SOTINCHI"].ToString();
+                txtmahp.Text = hp["MAHOCPHAN"].ToString();
+                txtNhom.Text = string.Format("{0} - {1}", hp["MANHOM"], hp["TENNHOM"]);
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi");
@@ -159,12 +160,12 @@ namespace Project_Diem_Danh
             try
             {
                 SinhVien sv = SinhVienDAO.Instance.getInfoSinhVienByID(MaSV);
-                this.Text = sv.HoDem + " " + sv.Ten + " - "+ MaHP;
-                txtMaSV.Text = sv.MaSV.ToString();
+                this.Text = string.Format("{0} {1} - {2}", sv.HoDem, sv.Ten, MaHP);
+                txtMaSV.Text = sv.MaSV;
                 txtID.Text = "";
                 txtID.Text = sv.Id;
                 txtHoTen.Text = "";
-                txtHoTen.Text = sv.HoDem.ToString() + " " + sv.Ten.ToString();
+                txtHoTen.Text = string.Format("{0} {1}", sv.HoDem, sv.Ten);
                 txtGioiTinh.Text = "";
                 txtGioiTinh.Text = sv.GioiTinh.ToString();
                 DateTime dt = Convert.ToDateTime(sv.NgaySinh.ToString());

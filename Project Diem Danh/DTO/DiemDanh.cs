@@ -159,7 +159,7 @@ namespace Project_Diem_Danh.DTO
         }
         public DiemDanh(DataRow row)
         {
-            this.mamonhoc = row["mahocphan"].ToString();
+            this.mamonhoc = row["MANHOM"].ToString();
             this.Id = row["MASINHVIEN"].ToString();
             this.lanhoc = Convert.ToInt32(row["lanhoc"].ToString());
             this.hocky = row["hocky"].ToString();

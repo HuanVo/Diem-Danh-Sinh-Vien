@@ -1,23 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using Project_Diem_Danh.DAO;
 using Project_Diem_Danh.DTO;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Controls;
-using DevExpress.XtraLayout;
 using Project_Diem_Danh.Report;
 using System.Data.SqlClient;
-using System.IO;
-using System.Drawing.Printing;
-using System.Threading;
 using System.Text.RegularExpressions;
 namespace Project_Diem_Danh
 {
@@ -156,7 +146,7 @@ namespace Project_Diem_Danh
                     case 7:
                         {
                             dt = new DataTable();
-                            String sqlString = @"EXEC getTableTrangThaiTuanHoc";
+                            String sqlString = @"SELECT * FROM NHOM";
                             DataProvider.Instance.OpenConnect();
                             sda = new SqlDataAdapter(sqlString, DataProvider.Instance._Connection);
                             sda.Fill(dt);
@@ -275,7 +265,7 @@ namespace Project_Diem_Danh
                 {
                     case 1:
                         {
-                            String ExcelDataQuery = @"select MASINHVIEN, MAHOCPHAN, LANHOC, HOCKY,TUAN_1,TUAN_2,TUAN_3,TUAN_4,TUAN_5,TUAN_6,TUAN_7,TUAN_8,TUAN_9,TUAN_10,TUAN_11,TUAN_12,TUAN_13,TUAN_14,TUAN_15,TUAN_16,TUAN_17,SOBUOIHOC, SOBUOIPHEP FROM " + "[" + Sheet + "$]";
+                            String ExcelDataQuery = string.Format(@"select MASINHVIEN, MANHOM, LANHOC, HOCKY,TUAN_1,TUAN_2,TUAN_3,TUAN_4,TUAN_5,TUAN_6,TUAN_7,TUAN_8,TUAN_9,TUAN_10,TUAN_11,TUAN_12,TUAN_13,TUAN_14,TUAN_15,TUAN_16,TUAN_17,SOBUOIHOC, SOBUOIPHEP FROM [{0}$]", Sheet);
                             try
                             {
                                 if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "DIEMDANH", Checked))
@@ -290,7 +280,7 @@ namespace Project_Diem_Danh
                         break;
                     case 2:
                         {
-                            String ExcelDataQuery = @"select ID, HODEM, TEN, NGAYSINH, GIOITINH, NOISINH, IMAGES, MASINHVIEN, MALOP FROM " + "[" + Sheet + "$]";
+                            String ExcelDataQuery = string.Format(@"select ID, HODEM, TEN, NGAYSINH, GIOITINH, NOISINH, IMAGES, MASINHVIEN, MALOP FROM [{0}$]", Sheet);
                             try
                             {
                                 if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "SINHVIEN", Checked))
@@ -305,7 +295,7 @@ namespace Project_Diem_Danh
                         break;
                     case 3:
                         {
-                            String ExcelDataQuery = @"select MAGIANGVIEN, HODEM, TEN, DIACHI, SODIENTHOAI, NGAYSINH, EMAIL, PASSWORD_USER, MAKHOA, TYPE_USER FROM " + "[" + Sheet + "$]";
+                            String ExcelDataQuery = string.Format(@"select MAGIANGVIEN, HODEM, TEN, DIACHI, SODIENTHOAI, NGAYSINH, EMAIL, PASSWORD_USER, MAKHOA, TYPE_USER FROM [{0}$]", Sheet);
                             try
                             {
                                 if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "GIANGVIEN", Checked))
@@ -320,7 +310,7 @@ namespace Project_Diem_Danh
                         break;
                     case 4:
                         {
-                            String ExcelDataQuery = @"select MAKHOA, TENKHOA, NAMTHANHLAP, DIENTHOAI FROM " + "[" + Sheet + "$]";
+                            String ExcelDataQuery = string.Format(@"select MAKHOA, TENKHOA, NAMTHANHLAP, DIENTHOAI FROM [{0}$]", Sheet);
                             try
                             {
                                 if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "KHOA", Checked))
@@ -335,7 +325,7 @@ namespace Project_Diem_Danh
                         break;
                     case 5:
                         {
-                            String ExcelDataQuery = @"select MALOP, TENLOP, HEDAOTAO, NAMNHAPHOC, MAKHOA FROM " + "[" + Sheet + "$]";
+                            String ExcelDataQuery = string.Format(@"select MALOP, TENLOP, HEDAOTAO, NAMNHAPHOC, MAKHOA FROM [{0}$]", Sheet);
                             try
                             {
                                 if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "LOP", Checked))
@@ -350,7 +340,7 @@ namespace Project_Diem_Danh
                         break;
                     case 6:
                         {
-                            String ExcelDataQuery = @"select MAHOCPHAN, TENHOCPHAN, SOTINCHI, MAGIANGVIEN FROM " + "[" + Sheet + "$]";
+                            String ExcelDataQuery = string.Format(@"select MAHOCPHAN, TENHOCPHAN, SOTINCHI FROM [{0}$]", Sheet);
                             try
                             {
                                 if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "HOCPHAN", Checked))
@@ -365,12 +355,12 @@ namespace Project_Diem_Danh
                         break;
                     case 7:
                         {
-                            String ExcelDataQuery = @"select MAHOCPHAN, SOBUOIHOC FROM  " + "[" + Sheet + "$]";
+                            String ExcelDataQuery = string.Format(@"select MANHOM, TENNHOM, MAGIANGVIEN, MAHOCPHAN, SOBUOIHOC, CHECKDIEMDANH FROM [{0}$]", Sheet);
                             try
                             {
-                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "TRANGTHAITUANHOC", Checked))
-                                    ShowMessageResult("Import thành công -  TRANGTHAITUANHOC", 1);
-                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - TRANGTHAITUANHOC", 0);
+                                if (Importdata.Instance.ImportDataFromExcel(PathExcelFile, ExcelDataQuery, "NHOM", Checked))
+                                    ShowMessageResult("Import thành công -  NHOM", 1);
+                                else ShowMessageResult("LỖI Import không thành công, vui lòng thử lại - NHOM", 0);
                             }
                             catch (Exception ex)
                             {
@@ -541,12 +531,12 @@ namespace Project_Diem_Danh
                     {
                         try
                         {
-                            String sqlString = @"EXEC getTableTrangThaiTuanHoc";
+                            String sqlString = @"EXEC SELECT * FROM NHOM";
                             DataTable dt = TrangThaiTuanHocDAO.Instance.getAllTableTrangThaiTuanHoc(sqlString);
                             if (Exportdata.exportDataToExcel(Title, dt))
-                                ShowMessageResult("Đã Export thành công TRANGTHAITUANHOC", 1);
+                                ShowMessageResult("Đã Export thành công Nhóm học phần", 1);
                             else
-                                ShowMessageResult("Không Thể Export TRANGTHAITUANHOC", 0);
+                                ShowMessageResult("Không Thể Export Nhóm học phần", 0);
                         }
                         catch (Exception d)
                         {
@@ -779,19 +769,19 @@ namespace Project_Diem_Danh
 
             cbtrangThaiDiemDanh.SelectedIndex = 0;
             txtTrangThaiSua.SelectedIndex = 0;
-            String sqlGetTableTrangThai = "Select TRANGTHAITUANHOC.MAHOCPHAN, TENHOCPHAN from TRANGTHAITUANHOC inner join HOCPHAN ON TRANGTHAITUANHOC.MAHOCPHAN = HOCPHAN.MAHOCPHAN";
-            String sqlGetTableHocPhan = "SELECT MAHOCPHAN, TENHOCPHAN FROM HOCPHAN";
-            getAllTabletoCombox(cbHPTrangThai, sqlGetTableHocPhan, "TENHOCPHAN", "MAHOCPHAN");
+            //String sqlGetTableTrangThai = "Select TRANGTHAITUANHOC.MAHOCPHAN, TENHOCPHAN from TRANGTHAITUANHOC inner join HOCPHAN ON TRANGTHAITUANHOC.MAHOCPHAN = HOCPHAN.MAHOCPHAN";
+            //String sqlGetTableHocPhan = "SELECT MAHOCPHAN, TENHOCPHAN FROM HOCPHAN";
+            //getAllTabletoCombox(cbHPTrangThai, sqlGetTableHocPhan, "TENHOCPHAN", "MAHOCPHAN");
 
-            getAllTabletoCombox(cbHPSuaTrangThai, sqlGetTableTrangThai, "TENHOCPHAN", "MAHOCPHAN");
+            //getAllTabletoCombox(cbHPSuaTrangThai, sqlGetTableTrangThai, "TENHOCPHAN", "MAHOCPHAN");
 
-            String sqlGetTableGiangVien = "Select MAGIANGVIEN, (HODEM +' ' + TEN +'('+MAGIANGVIEN+')') AS HOTEN from giangvien";
-            getAllTabletoCombox(cbMaGV, sqlGetTableGiangVien, "HOTEN", "MAGIANGVIEN");
-            getAllTabletoCombox(txmMaGVedit, sqlGetTableGiangVien, "HOTEN", "MAGIANGVIEN");
+            String sqlGetTableGiangVien = "Select MAKHOA, TENKHOA from KHOA";
+            getAllTabletoCombox(cbMaGV, sqlGetTableGiangVien, "TENKHOA", "MAKHOA");
+            getAllTabletoCombox(txmMaGVedit, sqlGetTableGiangVien, "TENKHOA", "MAKHOA");
             //txmMaGVedit
             LoadtableHocphan();
             LoadtableDiemDanh();
-            LoadtableTrangThaiTuanHoc();
+            //LoadtableTrangThaiTuanHoc();
         }
         public void getAllTabletoCombox(System.Windows.Forms.ComboBox cbb, String sql, String DisplayMember, String ValueMember)
         {
@@ -811,18 +801,18 @@ namespace Project_Diem_Danh
             {
                 String mahp = txtMaHP.Text.ToString().Trim();
                 String tenhp = txtTenHP.Text.ToString().Trim();
-                String magv = cbMaGV.SelectedValue.ToString();
-                if (mahp != "" && tenhp != "" && txtSoTC.Text.ToString().Trim() != ""  && magv != "")
+                String makhoa = cbMaGV.SelectedValue.ToString();
+                if (mahp != "" && tenhp != "" && txtSoTC.Text.ToString().Trim() != ""  && makhoa != "")
                 {
                     int sotc = Convert.ToInt32(txtSoTC.Text.ToString().Trim());
                     if (!HocPhanDAO.Instance.issetHocPhan(mahp))
                     {
-                        AddHocPhan(mahp, tenhp, sotc, magv);
+                        AddHocPhan(mahp, tenhp, sotc, makhoa);
                     }
                     else
                     {
                         lblkq.ForeColor = Color.Red;
-                        lblkq.Text = "Học phần " + tenhp + "(" + mahp + ") đã tồn tại";
+                        lblkq.Text = string.Format("Học phần {0}({1}) đã tồn tại", tenhp, mahp);
                     }
                 }
                 else
@@ -838,23 +828,19 @@ namespace Project_Diem_Danh
 
         }
 
-        public void AddHocPhan(String mahp, String tenhp, int sotc, String magv)
+        public void AddHocPhan(String mahp, String tenhp, int sotc, String MAKHOA)
         {
-            if (HocPhanDAO.Instance.AddNewHP(mahp, tenhp, sotc, magv) > 0)
+            if (HocPhanDAO.Instance.AddNewHP(mahp, tenhp, sotc, MAKHOA) > 0)
             {
-
-                if (TrangThaiTuanHocDAO.Instance.AddNewHocPhan_Trangthaituanhoc(mahp) > 0)
-                {
                     lblkq.ForeColor = Color.Black;
-                    lblkq.Text = "Đã thêm thành công học phần " + tenhp + "(" + mahp + ")";
+                    lblkq.Text = string.Format("Đã thêm thành công học phần {0}({1})", tenhp, mahp);
                     LoadtableHocphan();
                 }
-                else
+            else
                 {
                     lblkq.ForeColor = Color.Red;
-                    lblkq.Text = "Đã có lỗi xãy ra. Không thêm được Học Phần" + tenhp + "(" + mahp + ")";
+                    lblkq.Text = string.Format("Đã có lỗi xãy ra. Không thêm được Học Phần{0}({1})", tenhp, mahp);
                 }
-            }
         }
 
 
@@ -874,23 +860,16 @@ namespace Project_Diem_Danh
         {
             try
             {
-                String mahp = txtMaHPedit.Text.ToString().Trim();
-                String tenhp = txtTenHPedit.Text.ToString().Trim();
-                int sotc = Convert.ToInt32(txtSoTCedit.Text.ToString().Trim());
-                String magv = txmMaGVedit.SelectedValue.ToString();
+                String mahp = txtMaHPedit.Text.Trim();
+                String tenhp = txtTenHPedit.Text.Trim();
+                int sotc = Convert.ToInt32(txtSoTCedit.Text.Trim());
+                String MAKHOA = txmMaGVedit.SelectedValue.ToString();
                 if (HocPhanDAO.Instance.issetHocPhan(mahp))
                 {
-                    if (mahp != "" && tenhp != "" && sotc > 0 && magv != "")
+                    if (mahp != "" && tenhp != "" && sotc > 0 && MAKHOA != "")
                     {
-                        if (GiangVienDAO.Instance.issetGiangVien(magv))
-                        {
-                            updateHocPhan(mahp, tenhp, sotc, magv);
-                        }
-                        else
-                        {
-                            lblkqedit.ForeColor = Color.Red;
-                            lblkqedit.Text = "Không có giảng viên phù hợp!";
-                        }
+                            updateHocPhan(mahp, tenhp, sotc, MAKHOA);
+
                     }
                     else
                     {
@@ -901,7 +880,7 @@ namespace Project_Diem_Danh
                 else
                 {
                     lblkqedit.ForeColor = Color.Red;
-                    lblkqedit.Text = "Học phần " + tenhp + "(" + mahp + ") Không tồn tại";
+                    lblkqedit.Text = string.Format("Học phần {0}({1}) Không tồn tại", tenhp, mahp);
                 }
             }
             catch (Exception ex)
@@ -915,13 +894,13 @@ namespace Project_Diem_Danh
             if (HocPhanDAO.Instance.UpdateHP(mahp, tenph, sotc, magv) > 0)
             {
                 lblkqedit.ForeColor = Color.Black;
-                lblkqedit.Text = "Đã sửa thành công học phần " + tenph + "(" + mahp + ")";
+                lblkqedit.Text = string.Format("Đã sửa thành công học phần {0}({1})", tenph, mahp);
                 LoadtableHocphan();
             }
             else
             {
                 lblkqedit.ForeColor = Color.Red;
-                lblkqedit.Text = "Đã có lỗi xãy ra. Không sửa học Phần" + tenph + "(" + mahp + ")";
+                lblkqedit.Text = string.Format("Đã có lỗi xãy ra. Không sửa học Phần{0}({1})", tenph, mahp);
             }
         }
 
@@ -930,7 +909,7 @@ namespace Project_Diem_Danh
             txtMaHPedit.Text = gridView1.GetFocusedRowCellDisplayText("MAHOCPHAN").ToString();
             txtTenHPedit.Text = gridView1.GetFocusedRowCellDisplayText("TENHOCPHAN").ToString();
             txtSoTCedit.Text = gridView1.GetFocusedRowCellDisplayText("SOTINCHI").ToString();
-            txmMaGVedit.Text = gridView1.GetFocusedRowCellDisplayText("MAGIANGVIEN").ToString();
+            //txmMaGVedit.SelectedValue = gridView1.GetFocusedRowCellDisplayText("KHOA");
             txtMaHPdel.Text = gridView1.GetFocusedRowCellDisplayText("MAHOCPHAN").ToString();
         }
 
@@ -949,10 +928,10 @@ namespace Project_Diem_Danh
         /// <param name="e"></param>
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            String mahp = txtMaHPdel.Text.ToString().Trim();
+            String mahp = txtMaHPdel.Text.Trim();
             if (HocPhanDAO.Instance.issetHocPhan(mahp))
             {
-                DialogResult rs = MessageBox.Show("Bạn Có muốn xóa học phần có mã " + mahp + "?", "Xác Nhận Xóa Học Phần", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult rs = MessageBox.Show(string.Format("Bạn Có muốn xóa học phần có mã {0}?", mahp), "Xác Nhận Xóa Học Phần", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (rs == DialogResult.OK)
                 {
                     DelHocPhan(mahp);
@@ -969,8 +948,6 @@ namespace Project_Diem_Danh
         {
             try
             {
-                if (TrangThaiTuanHocDAO.Instance.DelTrangThaiById(MaHP) > 0)
-                {
                     if (HocPhanDAO.Instance.DelHocPhanById(MaHP) > 0)
                     {
                         lblkqxoa.ForeColor = Color.Black;
@@ -980,14 +957,8 @@ namespace Project_Diem_Danh
                     else
                     {
                         lblkqxoa.ForeColor = Color.Red;
-                        lblkqxoa.Text = "Không thể xóa học phần có mã: " + MaHP + ", Kiểm tra lại!";
+                        lblkqxoa.Text = string.Format("Không thể xóa học phần có mã: {0}, Kiểm tra lại!", MaHP);
                     }
-                }
-                else
-                {
-                    lblkqxoa.ForeColor = Color.Red;
-                    lblkqxoa.Text = "Không thể xóa học phần có mã: " + MaHP + ", Kiểm tra lại!";
-                }
             }
             catch (Exception ex)
             {
@@ -1008,13 +979,13 @@ namespace Project_Diem_Danh
             if (DiemDanhDAO.Instance.DelDiemdanhByMaSV(MaSV, Mahp, lanhoc) > 0)
             {
                 lbldelDD.ForeColor = Color.Black;
-                lbldelDD.Text = "Đã Xóa " + MaSV + " ra khỏi danh sách điểm danh";
+                lbldelDD.Text = string.Format("Đã Xóa {0} ra khỏi danh sách điểm danh", MaSV);
                 LoadtableDiemDanh();
             }
             else
             {
                 lbldelDD.ForeColor = Color.Red;
-                lbldelDD.Text = "Lỗi! Không thể xóa " + MaSV + "";
+                lbldelDD.Text = string.Format("Lỗi! Không thể xóa {0}", MaSV);
             }
         }
         // kiểm tra trường số
@@ -1147,7 +1118,7 @@ namespace Project_Diem_Danh
             else
             {
                 label20.ForeColor = Color.Red;
-                label20.Text = "Lỗi. Không thể thêm " + MaSV + " Vào CSDL";
+                label20.Text = string.Format("Lỗi. Không thể thêm {0} Vào CSDL", MaSV);
             }
         }
         /// <summary>
@@ -1173,7 +1144,7 @@ namespace Project_Diem_Danh
                     else
                     {
                         lblThemTrangthai.ForeColor = Color.Red;
-                        lblThemTrangthai.Text = "Mã học phần " + "(" + Mahp + ") không tồn tại hoặc đã có trong danh sách";
+                        lblThemTrangthai.Text = string.Format("Mã học phần ({0}) không tồn tại hoặc đã có trong danh sách", Mahp);
                     }
                 }
                 else
@@ -1193,13 +1164,13 @@ namespace Project_Diem_Danh
             if (TrangThaiTuanHocDAO.Instance.AddRowTrangThai(MaHP, Sobuoihoc, Trangthai) > 0)
             {
                 lblThemTrangthai.ForeColor = Color.Black;
-                lblThemTrangthai.Text = "Thêm thành công!" + MaHP + " Vào CSDL";
+                lblThemTrangthai.Text = string.Format("Thêm thành công!{0} Vào CSDL", MaHP);
                 LoadtableDiemDanh();
             }
             else
             {
                 lblThemTrangthai.ForeColor = Color.Red;
-                lblThemTrangthai.Text = "Lỗi. Không thể thêm " + MaHP + " Vào CSDL";
+                lblThemTrangthai.Text = string.Format("Lỗi. Không thể thêm {0} Vào CSDL", MaHP);
             }
         }
 
@@ -1229,7 +1200,7 @@ namespace Project_Diem_Danh
                         // sửa chổ này
                         if (TrangThaiTuanHocDAO.Instance.updateTrangthai(Mahp, sotuandahoc, TrangThaiSua) > 0)
                         {
-                            LoadtableTrangThaiTuanHoc();
+                            //LoadtableTrangThaiTuanHoc();
                             lblSuaTrangThai.ForeColor = Color.Black;
                             lblSuaTrangThai.Text = "Sửa thành công";
                         }
@@ -1242,7 +1213,7 @@ namespace Project_Diem_Danh
                     else
                     {
                         lblSuaTrangThai.ForeColor = Color.Red;
-                        lblSuaTrangThai.Text = "Mã học phần " + "(" + Mahp + ") không tồn tại";
+                        lblSuaTrangThai.Text = string.Format("Mã học phần ({0}) không tồn tại", Mahp);
                     }
                 }
                 else
@@ -1283,7 +1254,7 @@ namespace Project_Diem_Danh
                 else
                 {
                     lblXoaTrangthai.ForeColor = Color.Red;
-                    lblXoaTrangthai.Text = "Mã học phần " + "(" + Mahp + ") không tồn tại";
+                    lblXoaTrangthai.Text = string.Format("Mã học phần ({0}) không tồn tại", Mahp);
                 }
             }
             catch (Exception ex)
@@ -1315,7 +1286,7 @@ namespace Project_Diem_Danh
         /// <param name="MaHocPhan">Mã học phần</param>
         private void ShowInfoHocPhanByMaHocPhan(String MaHocPhan)
         {
-            String sql = "EXEC getInfoHocPhanByMaHP '" + MaHocPhan + "'";
+            String sql = string.Format("EXEC getInfoHocPhanByMaHP '{0}'", MaHocPhan);
             DataTable dt = HocPhanDAO.Instance.getAllTableHocPhan(sql);
             foreach(DataRow row in dt.Rows)
             {

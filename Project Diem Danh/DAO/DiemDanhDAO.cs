@@ -34,7 +34,7 @@ namespace Project_Diem_Danh.DAO
         public DataTable getListDiemDanhByMaHocPhan(String mhp)
         {
             DataTable dt = new DataTable();
-            String strSqlDuLieuChuan = @"EXEC getListDiemDanhByMaHocPhan '" + mhp + "'";
+            String strSqlDuLieuChuan = string.Format(@"SELECT  DIEMDANH.MASINHVIEN, HODEM, TENSINHVIEN, DIEMDANH.MANHOM, LANHOC, HOCKY,DIEMDANH.SOBUOIHOC, DIEMDANH.SOBUOIPHEP, TUAN_1, TUAN_2, TUAN_3, TUAN_4,TUAN_5, TUAN_6, TUAN_7, TUAN_8,TUAN_9,TUAN_10, TUAN_11, TUAN_12, TUAN_13, TUAN_14,TUAN_15, TUAN_16, TUAN_17 FROM DIEMDANH INNER JOIN SINHVIEN ON SINHVIEN.MASINHVIEN = DIEMDANH.MASINHVIEN where DIEMDANH.MANHOM = '{0}'", mhp);
             dt = DataProvider.Instance.LoadAllTable(strSqlDuLieuChuan);
             return dt;
         }
@@ -49,7 +49,7 @@ namespace Project_Diem_Danh.DAO
         {
             DiemDanh result =new DiemDanh();
             DataTable dt = new DataTable();
-            String strSqlDuLieuChuan = @"EXEC getListDIEMDANHByMASINHVIENMaHocPhan '" + id + "', '" + mahp + "'";
+            String strSqlDuLieuChuan = string.Format(@"EXEC getListDIEMDANHByMASINHVIENMaHocPhan '{0}', '{1}'", id, mahp);
             dt = DataProvider.Instance.LoadAllTable(strSqlDuLieuChuan);
             result = new DiemDanh(dt.Rows[0]);
             return result;

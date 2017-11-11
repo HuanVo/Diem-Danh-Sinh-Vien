@@ -79,6 +79,8 @@
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtNhom = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -293,6 +295,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.txtNhom);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label16);
@@ -397,7 +401,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(48, 152);
+            this.label15.Location = new System.Drawing.Point(48, 159);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 14);
             this.label15.TabIndex = 14;
@@ -430,7 +434,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(38, 112);
+            this.label10.Location = new System.Drawing.Point(38, 128);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 14);
             this.label10.TabIndex = 9;
@@ -441,7 +445,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(17, 75);
+            this.label9.Location = new System.Drawing.Point(17, 67);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 14);
             this.label9.TabIndex = 8;
@@ -452,7 +456,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(12, 35);
+            this.label8.Location = new System.Drawing.Point(13, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 14);
             this.label8.TabIndex = 7;
@@ -465,7 +469,7 @@
             this.txtlanhoc.Enabled = false;
             this.txtlanhoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlanhoc.ForeColor = System.Drawing.Color.Black;
-            this.txtlanhoc.Location = new System.Drawing.Point(110, 146);
+            this.txtlanhoc.Location = new System.Drawing.Point(110, 153);
             this.txtlanhoc.Name = "txtlanhoc";
             this.txtlanhoc.ReadOnly = true;
             this.txtlanhoc.Size = new System.Drawing.Size(146, 23);
@@ -492,7 +496,7 @@
             this.txtsotc.Enabled = false;
             this.txtsotc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtsotc.ForeColor = System.Drawing.Color.Black;
-            this.txtsotc.Location = new System.Drawing.Point(110, 107);
+            this.txtsotc.Location = new System.Drawing.Point(110, 123);
             this.txtsotc.Name = "txtsotc";
             this.txtsotc.ReadOnly = true;
             this.txtsotc.Size = new System.Drawing.Size(146, 23);
@@ -519,7 +523,7 @@
             this.txtmahp.Enabled = false;
             this.txtmahp.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmahp.ForeColor = System.Drawing.Color.Black;
-            this.txtmahp.Location = new System.Drawing.Point(110, 69);
+            this.txtmahp.Location = new System.Drawing.Point(110, 61);
             this.txtmahp.Name = "txtmahp";
             this.txtmahp.ReadOnly = true;
             this.txtmahp.Size = new System.Drawing.Size(146, 23);
@@ -785,6 +789,31 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(61, 96);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(46, 14);
+            this.label19.TabIndex = 22;
+            this.label19.Text = "Nhóm:";
+            // 
+            // txtNhom
+            // 
+            this.txtNhom.BackColor = System.Drawing.Color.LightGray;
+            this.txtNhom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNhom.Enabled = false;
+            this.txtNhom.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhom.ForeColor = System.Drawing.Color.Black;
+            this.txtNhom.Location = new System.Drawing.Point(110, 91);
+            this.txtNhom.Name = "txtNhom";
+            this.txtNhom.ReadOnly = true;
+            this.txtNhom.Size = new System.Drawing.Size(146, 23);
+            this.txtNhom.TabIndex = 21;
+            this.txtNhom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmShowDetailSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -868,6 +897,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtNhom;
 
 
 

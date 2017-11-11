@@ -15,12 +15,12 @@ namespace Project_Diem_Danh
     public partial class FrmLogin : Form
     {
         RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-         Flashing fl = new Flashing();
+         //Flashing fl = new Flashing();
         public FrmLogin()
         {
            try
            {
-              fl.ShowSplash();
+              //fl.ShowSplash();
                InitializeComponent();
                rkApp.SetValue("registryDiemDanh", Application.ExecutablePath.ToString());
            }
@@ -28,12 +28,12 @@ namespace Project_Diem_Danh
            {
                MessageBox.Show(ex.Message);
            }
-            finally
-           {
+            //finally
+           //{
                // EndFlashing
-               fl.CloseSplash();
-              this.Activate();
-           }
+               //fl.CloseSplash();
+              //this.Activate();
+           //}
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -88,9 +88,6 @@ namespace Project_Diem_Danh
             MessageBox.Show("Liên hệ quản trị viên nếu quên tài khoản!", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

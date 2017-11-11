@@ -1,21 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using System.Windows.Media;
 using Project_Diem_Danh.DTO;
 using Project_Diem_Danh.DAO;
-using Project_Diem_Danh.Report;
 using System.Configuration;
-using System.Diagnostics;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 
 namespace Project_Diem_Danh
 {
@@ -93,7 +84,7 @@ namespace Project_Diem_Danh
             {
                 GiangVien GV = GiangVienDAO.Instance.getGiangVienByID(IDGiangVien);
                 txtMaKhoa.Text = GV.MaKhoa;
-                txtFullName.Text = GV.HoDem + " " + GV.Ten;
+                txtFullName.Text = string.Format("{0} {1}", GV.HoDem, GV.Ten);
                 txtPhone.Text = GV.SoDT;
                 txtemail.Text = GV.Email;
                 txtAddress.Text = GV.DiaChi;
@@ -108,34 +99,37 @@ namespace Project_Diem_Danh
 
         private void ShowHocPhanByIDGiangVien(String id)
         {
-            List<HocPhan> dshocphan = HocPhanDAO.Instance.getListHocPhanByIDGiangVien(id);
-            pnlLayout_ListClass.Controls.Clear();
-            foreach (HocPhan i in dshocphan)
+            DataTable dshocphan = NhomDAO.Instance.getListNhomHocPhanByIDGiangVien(id);
+            if (dshocphan.Rows.Count > 0)
             {
-                Button btnHocPhan = new Button() { Width = HocPhanDAO.WidthButton, Height = HocPhanDAO.HeightButton };
-                btnHocPhan.Text = i.TenHocPhan + System.Environment.NewLine + "(" + i.MaHocPhan + ")";
-                btnHocPhan.ForeColor = System.Drawing.Color.White;
-                btnHocPhan.FlatStyle = FlatStyle.Flat;
-                btnHocPhan.FlatAppearance.BorderSize = 1;
-                btnHocPhan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(104, 33, 122);
-                btnHocPhan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(104, 33, 122);
-                btnHocPhan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(16, 124, 16);
-                btnHocPhan.Click += btnHocPhan_Click;
-                btnHocPhan.Tag = i;
-                pnlLayout_ListClass.Controls.Add(btnHocPhan);
+                pnlLayout_ListClass.Controls.Clear();
+                foreach (DataRow i in dshocphan.Rows)
+                {
+                    Button btnHocPhan = new Button() { Width = HocPhanDAO.WidthButton, Height = HocPhanDAO.HeightButton };
+                    btnHocPhan.Text = i["MAHOCPHAN"] + "-" + i["TENHOCPHAN"] + System.Environment.NewLine + "(" + i["TENNHOM"] + ")";
+                    btnHocPhan.ForeColor = System.Drawing.Color.White;
+                    btnHocPhan.FlatStyle = FlatStyle.Flat;
+                    btnHocPhan.FlatAppearance.BorderSize = 1;
+                    btnHocPhan.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(104, 33, 122);
+                    btnHocPhan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(104, 33, 122);
+                    btnHocPhan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(16, 124, 16);
+                    btnHocPhan.Click += btnHocPhan_Click;
+                    btnHocPhan.Tag = i;
+                    pnlLayout_ListClass.Controls.Add(btnHocPhan);
+                }
             }
         }
 
         private void ShowHocPhanByIDGiangVienAndMaHP(String id, String mahp)
         {
-            List<HocPhan> dshocphan = HocPhanDAO.Instance.getListHocPhanByIDGiangVienAndMaHP(id, mahp);
-            if (dshocphan.Count > 0)
+            DataTable dshocphan = NhomDAO.Instance.getListNhomHocPhanByIDGiangVienAndMHP(id, mahp);
+            if (dshocphan.Rows.Count > 0)
             {
                 pnlLayout_ListClass.Controls.Clear();
-                foreach (HocPhan i in dshocphan)
+                foreach (DataRow i in dshocphan.Rows)
                 {
                     Button btnHocPhan = new Button() { Width = HocPhanDAO.WidthButton, Height = HocPhanDAO.HeightButton };
-                    btnHocPhan.Text = i.TenHocPhan + System.Environment.NewLine + "(" + i.MaHocPhan + ")";
+                    btnHocPhan.Text = i["MAHOCPHAN"] + "-" + i["TENHOCPHAN"] + System.Environment.NewLine + "(" + i["TENNHOM"] + ")";
                     btnHocPhan.ForeColor = System.Drawing.Color.White;
                     btnHocPhan.FlatStyle = FlatStyle.Flat;
                     btnHocPhan.FlatAppearance.BorderSize = 1;
@@ -174,19 +168,24 @@ namespace Project_Diem_Danh
         {
             try
             {
-                String MaHocPhan = ((sender as Button).Tag as HocPhan).MaHocPhan;
-                TenHP = ((sender as Button).Tag as HocPhan).TenHocPhan;
+                DataRow hp = ((sender as Button).Tag as DataRow);
+                String MaHocPhan = hp["MANHOM"].ToString();
+                TenHP = hp["TENHOCPHAN"].ToString();
                 MaHP = MaHocPhan;
                 ShowDanhSachLopHocByMaHocPhan(MaHocPhan);
-                HocPhan hp = HocPhanDAO.Instance.getHocPhanByID(MaHocPhan);
-                lblTenLop.Text = hp.TenHocPhan.ToString();
-                TrangThaiTuanHoc TrangThai = TrangThaiTuanHocDAO.Instance.getTrangThaiTuanHocByMaHocPhan(MaHocPhan);
-                lblSoLuong.Text = hp.SoTinChi.ToString();
-                txtTotalBuoiHoc.Text = TrangThai.Trangthai.ToString();
-                int times = Convert.ToInt32(ConfigurationManager.AppSettings["thoigian1tiet"].ToString()) * Convert.ToInt32(hp.SoTinChi.ToString());
-                if (hp.SoTinChi > 1)
+
+                //NhomDAO.Instance.getHocPhanByID(MaHocPhan);
+                lblTenLop.Text = string.Format("{0} - {1}", hp["MAHOCPHAN"], hp["TENHOCPHAN"]);
+                //TrangThaiTuanHoc TrangThai = TrangThaiTuanHocDAO.Instance.getTrangThaiTuanHocByMaHocPhan(MaHocPhan);
+                txtNhomHP.Text = string.Format("{0} - {1}", hp["MANHOM"], hp["TENNHOM"]);
+                lblSoLuong.Text = hp["SOTINCHI"].ToString();
+                txtTotalBuoiHoc.Text = hp["SOBUOIHOC"].ToString();
+                int stc = Convert.ToInt32(hp["SOTINCHI"].ToString());
+                int times = Convert.ToInt32(ConfigurationManager.AppSettings["thoigian1tiet"].ToString()) * Convert.ToInt32(hp["SOTINCHI"].ToString());
+                
+                if (stc > 1)
                 {
-                    times = times + (hp.SoTinChi - 1) * 5;
+                    times = times + (stc - 1) * 5;
                 }
                 FrmConfigSetting.EditAppSetting("thoigianhoc", times.ToString());
             }
@@ -450,7 +449,7 @@ namespace Project_Diem_Danh
         {
             try
             {
-                String mahp = txtMHPSearch.Text.ToString().Trim();
+                String mahp = txtMHPSearch.Text.Trim();
                 if (!mahp.Equals(""))
                 {
                     ShowHocPhanByIDGiangVienAndMaHP(IDGiangVien1, mahp);

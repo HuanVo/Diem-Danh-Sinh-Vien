@@ -36,7 +36,8 @@ namespace Project_Diem_Danh.DAO
         public List<HocPhan> getListHocPhanByIDGiangVien(String id)
         {
             List<HocPhan> result = new List<HocPhan>();
-            String sqlString = @"EXEC getListHocPhanByIDGiangVien '"+id+"'";
+
+            String sqlString = string.Format(@"EXEC getListNhomHocPhanByIDGiangVien '{0}'", id);
             DataTable dt = DataProvider.Instance.LoadAllTable(sqlString);
             foreach(DataRow i in dt.Rows)
             {
@@ -167,7 +168,7 @@ namespace Project_Diem_Danh.DAO
             int kq = 0;
             try
             {
-                String sql = "EXEC DelHocPhanById N'" + mahp + "'";
+                String sql = string.Format("EXEC DelHocPhanById N'{0}'", mahp);
                 kq = DataProvider.Instance.ExcuteNonQuery(sql);
             }
             catch (Exception ex)

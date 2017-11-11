@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,7 +39,7 @@ namespace Project_Diem_Danh.DTO
             SinhVien sv = new SinhVien();
             DataTable dt = new DataTable();
             DataRow row;
-            String sqlString = "EXEC _proc_GetSinhVienByMASINHVIEN '" + ID + "'";
+            String sqlString = string.Format("EXEC _proc_GetSinhVienByMASINHVIEN '{0}'", ID);
             dt = DataProvider.Instance.LoadAllTable(sqlString);
             try
             {
@@ -57,7 +55,7 @@ namespace Project_Diem_Danh.DTO
         public bool checkIsStudents(String ID)
         {
             bool result = false;
-            String sqlStringProc = @"EXEC checkStudentSV '" + ID + "'";
+            String sqlStringProc = string.Format(@"EXEC checkStudentSV '{0}''", ID);
             if (DataProvider.Instance.ExcuteScaler(sqlStringProc) > 0)
                 result = true;
             return result;
@@ -66,7 +64,7 @@ namespace Project_Diem_Danh.DTO
         public DataTable getTableInfoSinhVienByID(String ID)
         {
             DataTable dt = new DataTable();
-            String sqlString = "EXEC _proc_GetSinhVienByMASINHVIEN '" + ID + "'";
+            String sqlString = string.Format("EXEC _proc_GetSinhVienByMASINHVIEN '{0}'", ID);
             dt = DataProvider.Instance.LoadAllTable(sqlString);
             return dt;
         }
@@ -76,7 +74,7 @@ namespace Project_Diem_Danh.DTO
             bool kq = false;
             try
             {
-                String sql = "select count(*) from sinhvien where masinhvien ='" + MaGV + "'";
+                String sql = string.Format("select count(*) from sinhvien where masinhvien ='{0}'", MaGV);
                 if (DataProvider.Instance.ExcuteScaler(sql) > 0)
                     kq = true;
             }
